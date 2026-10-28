@@ -1,4 +1,4 @@
-"""Render the architecture diagram used in the technical document."""
+﻿"""Render the architecture diagram used in the technical document."""
 
 from pathlib import Path
 
@@ -46,7 +46,7 @@ def main():
     box(ax, 4.75, 5.35, 3.7, 1.15, "Host 插件",
         "@local/dsh-chemellm\n12 个 chem_* 工具 · 阶段守卫 · 自动拉起", TEAL)
     box(ax, 9.1, 5.35, 3.55, 1.15, "本地内核 FastAPI :8765",
-        "59 个可执行工具 · 确定性计算", NAVY2)
+        "60 个可执行工具 · 确定性计算", NAVY2)
     arrow(ax, 4.0, 5.92, 4.7, 5.92)
     arrow(ax, 8.45, 5.92, 9.05, 5.92)
 

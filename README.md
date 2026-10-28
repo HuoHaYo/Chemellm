@@ -1,199 +1,159 @@
-# ChemELLM 本地化工工程工作台（DSH 插件版）
+# ChemELLM · 本地化工工程工作台
 
-把化工工程的项目管理、计算、文档与验收搬进 **DeepSeek Harness**，全部在本机完成，不依赖云端。
+把化工设计的**资料、要求、计划、依据、计算、图纸、校核与打包**放进一个 AI 工作台，全程在本机跑完，不依赖云端。
 
-- **交互面**：DSH Web GUI（侧栏「化工工程」面板 + 对话内 12 个 `chem_*` 工具）；面板直连本地内核（loopback CORS），Host 代理 `/chemellm` 作为备用。
-- **计算内核**：本地 Python 服务（`http://127.0.0.1:8765`），复用原 ChemELLM 的 22 类确定性计算模型、文档生成与证据工具。
-- **原项目**：完整归档在 [`old/`](old/)，不再作为运行入口。
+它由两部分组成：**DSH 插件**负责对话、编排、审批与界面，**本地 Python 内核**（FastAPI，`127.0.0.1:8765`）负责确定性计算、文档与图纸生成、证据检索。两者通过 loopback 通信，数据全部落在本机磁盘。
 
-> 当前是 v0.1 本地可用版：单用户、单机、默认无鉴权令牌（loopback）。边界见文末。
->
-> 本机现有两个已验收案例（均在 DSH 内从空项目建设）：**案例 A** 2026 赛题·苯乙烯清洁生产（35 要求/18 成果/28 计算/88 文件）与 **案例 B** 苯-甲苯精馏迁移案例（6 要求/4 成果/14 文件）；两者 zip 均通过 manifest 哈希校验，并含 `recompute.md` 复算说明。
+![系统架构](docs/assets/tech-architecture.png)
 
-## 使用教程
+> 当前版本 **v0.1（本机可用）**：单用户、单机、loopback；已有两个从空项目走通的验收案例。能力边界见文末，不写未实现的规划。
 
-**新手建议先读：[docs/USER_GUIDE.md](docs/USER_GUIDE.md)** —— 安装/启动、面板导览、第一个项目、12 个主域工具、五项 P0 工具（P&ID 数据链/设备数据表/安全阀选型/HAZOP-LOPA/符合性矩阵）、典型工作流、故障排查与能力边界。
+---
 
+## 它解决什么问题
 
-## 目录结构
+化工设计通常是这样推进的：任务书在 PDF 里，要求靠人工拆；物性查手册，衡算写 Excel，精馏靠手算或商业软件；PFD 用 CAD 画；最后交一摞文件。三个老问题反复出现：
 
-```
-kernel/                本地内核（FastAPI，包装 old/app 的工具链）
-  server.py            /v1 契约：项目、要求、计划、对象、执行、校核、打包、删除
-dsh-chemellm/          DSH 插件包（bundle + Host 半 + Client 半）
-  index.js             Host：12 个域工具（含 chem_tool）、阶段守卫、提示词、同源代理、内核自动拉起
-  client.js            Client：侧栏入口、工程面板、设置页
-  cordis.patch.yml     插件行配置（endpoint / token / phaseGate / autostart / dataDir）
-  runtime/             便携运行时：python/ + site-packages/ + kernel/ + app/ + requirements.txt
-  README.md            独立部署说明与能力矩阵
-dist/                  打包产物（scripts/package-plugin.ps1 生成的可分发 zip）
-dsh-chemellm-legacy/   伴生包源码（chem_legacy；主包 chem_tool 生效后已从 profile 移除）
-dsh-chemellm-enforce/  门禁测试覆盖包（仅 patch，把插件 phaseGate 切到 enforce；不默认安装）
-scripts/               启动、冒烟、成果包校验、UI 检查
-data/                  本地数据（内核 SQLite、项目 JSON、成果文件）
-.chem/                 只读工程快照（面板与 git diff 用）
-.venv-sim/             扩展环境（pyomo / rdkit / idaes-pse；可选）
-old/                   原 ChemELLM 项目归档（app/web/tests/docs/data…）
-standards/             用户提供的标准 PDF 与文本/页面导出（GB/T 3915-2021、GB/T 150.1-2024）
-docs/                  使用教程、快速上手、目标、验收记录、工具清单与专题说明
-```
+- **数字说不清来源**：报告里的 120 kmol/h 是哪一版假设、什么工况下的结果？
+- **改一处，全线返工**：转化率一改，衡算、塔、换热器、经济全部要重算，图纸和表格还得手工同步。
+- **交付物不一致**：报告、图纸、数据表各说各话，没人能一键验证。
 
-## 外部工具（本轮已安装）
+ChemELLM 把这套流程做成一条**可追溯的流水线**：
 
-| 工具 | 版本 | 用途 |
-|---|---|---|
-| LibreOffice | 26.8.1.1 | DOCX/PPTX→PDF 预览（沙箱内自动转换暂不稳定，见限制） |
-| FreeCAD | 1.1.4 | 三维设备布置与源文件（命令行已可用） |
-| DWSIM | 9.0.5 | 稳态流程模拟：外部自动化已接入，加载/求解 `.dwxmz/.dwxml`，输出 JSON/CSV |
-| uv | 0.13.5 | 快速装包（`pip` 在本机沙箱内会卡住时的替代） |
-| `.venv-sim` | pyomo 6.10.1 / rdkit 2026.9.1 / idaes-pse 2.13.0 / ipopt 3.13.2 | 流程优化、分子描述符、方程型建模；`scripts/sim-env.cmd` 打开已配置环境的 shell |
+- 每个数值必须写明**单位、条件、来源**（假设 / 设计选择 / 文档 / 计算四类）；
+- 每条要求逐条编码登记，要求 → 成果的映射缺一个，校核就拦下；
+- 改依据或改计算后，受影响的成果重新生成，旧审核自动失效；
+- 打包产出 zip，内含项目数据、计算记录、成果文件与 SHA256 清单，另附 `recompute.md` 说明如何复算与重新生成。
 
-学生项目、非盈利用途；免费/开源组件仅本机调用，不随仓库分发。完整清单、路径与许可见 [docs/TOOLS.md](docs/TOOLS.md)。
+## 适合谁
 
-## 快速开始
+适合：化工设计课程、学科竞赛、小型装置概念设计、想练习"能复算、能自证"的工程流程的团队。
 
-### 1. 准备 Python 环境（本机已完成）
+不太适合：需要施工图深度、需要商业流程模拟精度、或多人在线协作的场景（见「边界与限制」）。
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -e old       # 复用原项目依赖
-```
+---
 
-### 2. 启动本地内核
+## 能力一览
 
-```powershell
-.\scripts\start-kernel.cmd        # 或 .\scripts\start-kernel.ps1
-```
-
-首次启动会在 `data/kernel/` 建库、在 `data/projects/` 建项目目录；内核只监听 `127.0.0.1:8765`。
-
-### 3. 插件已安装（开发模式）
-
-本机当前 profile 已安装 `@local/dsh-chemellm`（bundle），并手动启动内核（见第 2 步）。换机器时有两种方式：
-
-**A. 开发模式（本仓库）**：安装 `<仓库>\dsh-chemellm`，手动运行 `scripts\start-kernel.cmd`。
-
-**B. 可独立部署包（推荐换机）**：插件包含**便携 Python 3.12 + 依赖 + 内核 + 归档应用**，Host 插件在探测不到内核时会自动拉起，目标机无需预装 Python。
-
-```powershell
-# 打包（生成 dist\dsh-chemellm-<日期>-win-x64.zip）
-powershell -ExecutionPolicy Bypass -File scripts\package-plugin.ps1
-
-# 目标机：解压后用 plugin_manager 安装该目录（或整个目录复制进 profile）
-```
-
-包内结构、配置项与能力矩阵见 [dsh-chemellm/README.md](dsh-chemellm/README.md)。要点：
-
-- `autostart: true` 时，Host 插件探测 `endpoint/v1/health`，失败则用 `runtime/python/python.exe` 启动 `runtime/kernel/server.py`，数据目录默认 `<DSH_PROFILE_DIR>/chemellm-data`；
-- **纯 Python 能力全部随包**：项目/要求/计划/依据/计算/证据/校核/打包、A1 P&ID、A3 设备图、xlsx、DOCX/PDF 报告；
-- **FreeCAD**（FCStd/STEP）与 **LibreOffice**（Office 预览）不随包，目标机已装则可用，缺失时工具返回明确错误、其余能力不受影响；
-- 运行时为 Windows x64；macOS/Linux 需替换对应便携 Python。
-
-### 4. 开始一个项目
-
-在面板点「新建项目」，然后在任意会话中让模型：
-
-> 用 chem_project 创建项目；用 chem_intake 登记 old/26化工设计大赛题目.pdf；用 chem_requirements 登记赛题要求；用 chem_plan 建立成果计划；用 chem_object 写入设计依据；用 chem_calc 计算；用 chem_generate 生成报告；用 chem_review 自检；用 chem_bundle 打包。
-
-完整链路示例（不经过模型，直接验证内核）：
-
-```powershell
-.\.venv\Scripts\python.exe -X utf8 scripts\smoke.py
-```
-
-## 域工具（11 个）
-
-| 工具 | 作用 |
+| 环节 | 能做什么 |
 |---|---|
-| `chem_project` | 列出 / 创建 / 读取本地项目 |
-| `chem_intake` | 登记工作区资料（PDF/DOCX/XLSX/CSV/SVG/DXF…），生成哈希与页数 |
-| `chem_requirements` | 要求清单登记与查看（编码、原文引句、适用性） |
-| `chem_plan` | 成果计划：要求→成果映射、对象计划、格式与依赖 |
-| `chem_object` | 工程对象（依据/物流/设备/公用工程/安全/成本…），数值带单位、条件与来源 |
-| `chem_calc` | 22 类计算模型：物性、蒸汽、单位、衡算、反应热、PR 闪蒸、精馏 MESH、分相、含氢冷凝、湿塔、循环、换热、压降、夹点、经济、Cantera、回归 |
-| `chem_evidence` | 文献检索、全文导入、引句证据、论断管理 |
-| `chem_generate` | 生成 DOCX/PPTX/PDF/MD 报告或 PFD/P&ID 草图（SVG/DXF） |
-| `chem_tool`（扩展） | 新增 `pid`（P&ID：设备/仪表/控制阀/联锁/管线号 → SVG/PDF/DXF/JSON/DEXPI 子集）、`pid_check`（P&ID 规则自检）、`cad_part`（参数化设备 CAD：FCStd/STEP/立面预览）。用法与限制见 [docs/DRAWING.md](docs/DRAWING.md) |
-| `chem_review` | 自动校核：覆盖、依据、校验、文件、缺口与 blockers |
-| `chem_bundle` | 打包项目：数据、计算、成果文件、哈希清单（zip） |
-| `chem_artifact` | 列出文件 / 取预览或下载链接（`/chemellm/files/…`） |
-| `chem_tool` | 通用透传：调用旧版任意已注册工具（设备登记/查询、图纸识读、数据集检查/分析等）；不传 `tool` 时列出全部工具名。**主包新代码需 Host 重启后生效** |
-| `chem_legacy` | 伴生包提供的等价透传，当前进程已可用；实测 `convert_units` 1 bar = 100 kPa，可列出 49 个可执行工具。Host 重启并验证 `chem_tool` 后可移除伴生包 |
+| 项目与资料 | 新建项目；登记 PDF/DOCX/XLSX/CSV/SVG/DXF，自动生成哈希与页数 |
+| 要求 | 逐条登记（编码、原文引句、适用性），支持"不适用"但必须写依据 |
+| 计划 | 建立要求 → 成果映射与格式清单，保证没有要求悬空 |
+| 依据 | 依据 / 物流 / 设备 / 公用工程 / 安全 / 成本对象，数值带单位、条件与来源 |
+| 计算 | 22 类确定性模型（下节） |
+| 证据 | 文献检索、全文导入、引句登记与论断管理 |
+| 成果 | DOCX / PDF / PPTX / MD 报告；PFD、P&ID、设备图（SVG/PDF/DXF）；xlsx 数据表；设备数据表 |
+| 校核 | 自动检查要求覆盖、依据字段完整性、成果文件覆盖、计算校验结果 |
+| 打包 | zip + SHA256 manifest + `recompute.md`，可离线校验 |
+
+### 22 类计算模型
+
+物性（thermo）· 蒸汽（CoolProp）· 单位换算 · 物料衡算 · 换热器 · PR 闪蒸 · 反应热 · 混合物反应 · 精馏捷算 · MESH 精馏 · 管压降 · 夹点分析 · 分相（水相）· 含氢冷凝 · 前端流程联立 · 湿塔 · 湿法分离序列 · 循环流程 · 经济估算 · 数据回归 · Cantera 平衡 · Cantera 反应器
+
+模型假设写在各自返回的 `warnings` 里，例如 PR 交互参数取零、理想精馏、UNIFAC 预测——**结果需要工程判断，不是黑箱结论**。
+
+### 图纸与工程数据链
+
+- **P&ID**：A1 图幅，含图框、标题栏、设备表、仪表阀门表、管线表；标注"不按比例（示意）"。
+- **设备图**：A3 立面图，含尺寸、接管表与按 GB/T 150.1 简化式计算的壁厚。
+- **数据链**：由 P&ID 模型生成管线表、材料表（MTO）、仪表索引、I/O 清单、联锁因果表；另可生成设备数据表、安全阀选型计算书、HAZOP/LOPA 工作表、标准符合性矩阵。
+- **外部模拟**：通过 DWSIM 桥接加载 `.dwxmz/.dwxml` 求解，输出 JSON/CSV（不创建、不编辑流程图）。
+
+![P&ID 局部（A1 示意图）](docs/assets/pid-standard-detail.png)
 
 ## 工程阶段与门禁
 
 ```
-资料(intake) → 要求(requirements) → 计划(plan) → 依据(basis) → 执行(execute) → 校核(review) → 打包(bundle) → 完成(done)
+资料 intake → 要求 requirements → 计划 plan → 依据 basis
+     → 执行 execute → 校核 review → 打包 bundle → 完成 done
 ```
 
-- 阶段由内核根据项目数据自动推导，写入 `.chem/<项目>/project.json`。
-- 插件配置 `phaseGate: advisory`（默认）时，越阶段调用仅在返回里给出警告；设为 `enforce` 时内核与插件守卫会拒绝。
-- 阶段变更或数据变更会重置 `review`，旧审核不自动沿用。
+- 阶段由内核根据项目数据**自动推导**，写入 `data/projects/<id>/project.json`；
+- `phaseGate: advisory` 时越阶段调用只警告，设为 `enforce` 时内核与插件双双拒绝（实测：intake 阶段调用材料衡算返回 HTTP 409，补齐依据后 200）；
+- 任何数据变更都会重置 `review`，旧审核不自动沿用。
 
-## 插件配置
+---
 
-`dsh-chemellm/cordis.patch.yml`：
+## 快速开始
 
-```yaml
-- insert:
-    - id: chemellm
-      name: '@local/dsh-chemellm'
-      config:
-        endpoint: http://127.0.0.1:8765
-        token: ''
-        phaseGate: advisory
+前置条件：Windows x64、Python 3.12、已安装 DeepSeek Harness（DSH）。
+
+```powershell
+# 1) Python 环境（内核复用 old/ 里的计算依赖）
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -e old
+
+# 2) 启动本地内核（只监听 127.0.0.1:8765）
+.\scripts\start-kernel.cmd
+
+# 3) 在 DSH 的 plugin_manager 中安装本仓库的 dsh-chemellm 目录（开发模式）
+#    安装后侧栏会出现「化工工程」面板
+
+# 4) 冒烟测试：建项目 → 要求 → 计划 → 依据 → 计算 → 报告 → 校核 → 打包
+.\.venv\Scripts\python.exe -X utf8 scripts\smoke.py
 ```
 
-- `endpoint`：内核地址（默认 loopback）。将来如需远端内核，只改这里。
-- `token`：可选。内核侧启动前设置 `CHEMELLM_KERNEL_TOKEN` 后，两边需一致；令牌只在 Host 侧使用，浏览器不可见。
-- `phaseGate`：`advisory` | `enforce` | `off`。
+在面板点「新建项目」，然后在会话里直接说：
 
-## 数据位置
+> 用 chem_project 创建项目；用 chem_intake 登记 `old/26化工设计大赛题目.pdf`；用 chem_requirements 登记赛题要求；用 chem_plan 建立成果计划；用 chem_object 写入设计依据；用 chem_calc 计算；用 chem_generate 生成报告；用 chem_review 自检；用 chem_bundle 打包。
 
-| 路径 | 内容 |
+换机器部署：`scripts/package-plugin.ps1` 可打出内置便携 Python 运行时的插件包（约 169 MiB），目标机无需预装 Python。运行时与分发包不进本仓库。
+
+## 仓库结构
+
+```
+kernel/               本地计算内核（FastAPI /v1 契约、22 类模型、图纸与数据链）
+dsh-chemellm/         DSH 插件（Host 侧 12 个 chem_* 工具、Client 侧面板与设置）
+  runtime/            便携运行时（不进仓库，由打包脚本生成）
+dsh-chemellm-legacy/  伴生透传包（历史）
+dsh-chemellm-enforce/ 门禁覆盖包（把 phaseGate 切到 enforce，用于测试）
+scripts/              启动、冒烟、打包、成果包校验、图形与文档生成
+docs/                 教程、工具清单、图纸规则、验收记录与专题说明
+old/                  原 ChemELLM 项目归档（Web 界面、云端部署、原测试），仅存档
+data/                 本机数据（内核库、项目 JSON、成果文件、打包 zip；不进仓库）
+.chem/                只读工程快照（供面板与 diff 使用；不进仓库）
+```
+
+数据位置：`data/kernel/chemellm.sqlite3`（计算与文件元数据）、`data/projects/<id>/project.json`（项目状态，唯一事实源）、`data/kernel/artifacts/`（成果原件）、`data/bundles/`（打包 zip）、`.chem/<id>/`（只读快照）。
+
+## 已验证的结果
+
+| 项目 | 结果 |
 |---|---|
-| `data/kernel/chemellm.sqlite3` | 计算记录与文件元数据（复用原库结构） |
-| `data/kernel/artifacts/` | 成果与资料原件 |
-| `data/projects/<id>/project.json` | 项目状态（唯一事实源） |
-| `data/bundles/` | 打包后的 zip |
-| `.chem/<id>/` | 只读快照（面板、git diff、离线审查） |
-
-## 验证状态（本机实测）
-
-| 项 | 结果 |
-|---|---|
-| 内核接口 | `/v1/health` 200；`scripts/smoke.py` 全链路通过（建项目→要求→计划→依据→计算→报告→校核→打包） |
-| 插件安装 | 仅 `@local/dsh-chemellm` installed / `applied`；伴生包已移除 |
-| 独立部署运行时 | 包内 `runtime/python`（CPython 3.12.7 embeddable）+ 58 个依赖；在 8799、8801、8802、8803 四个端口分别实测启动内核：`/v1/health` 200、**60 个可执行工具**、成功生成 P&ID（SVG/PDF/DXF/JSON/DEXPI） |
-| 可分发安装包 | `dist/dsh-chemellm-20261027-win-x64.zip`，**169.0 MB / 10,379 条目**（9,452 文件，含 DWSIM 运行器），SHA256 `b96c005a…74aa`；从解包目录启动内核成功，`SHA256SUMS.txt` 抽样校验一致 |
-| 部署包五工具实测 | 用打包后的 `runtime` 启动内核（8803 端口），在临时项目中实际调用 `pid_data`（8 文件）、`equipment_datasheet`（3）、`relief_sizing`（3）、`hazop_lopa`（3）、`compliance_matrix`（3），全部成功；工具数 60 |
-| DWSIM 接入 | `dwsim` 工具：检测 DWSIM 9.0.5，加载 Cavett `.dwxmz` 并求解，solved=true、20 条物料流/15 个单元操作；输出 JSON/CSV；项目 `DWSIM 接入验证（Cavett）` 已 review/bundle |
-| 自动拉起 | Host 插件 `autostart`：探测 `endpoint/v1/health` 失败时用包内 Python 启动 `runtime/kernel/server.py`；数据默认 `<DSH_PROFILE_DIR>/chemellm-data`。已按 Host 相同 spawn 参数验证；**运行中的 Host 仍是旧代码，需重启 DSH 后自动拉起才生效** |
-| 工具注册 | **12 个主域工具**（含 `chem_tool`）已在本会话可见并可调用；Host 重启后新代码已生效 |
-| 旧工具覆盖 | `chem_tool` 可列出 **60 个可执行工具**（含 `export_xlsx`、`export_freecad`、`pid`、`pid_check`、`pid_data`、`equipment_datasheet`、`relief_sizing`、`hazop_lopa`、`compliance_matrix`、`cad_part`、`dwsim`）并实际调用 |
-| 案例 A（M3） | ✅ 八轮闭环：35 要求 / **18 成果计划**（31/31 必需映射）、28 条计算、88 个文件；`chem_review` ready=true；zip **95 条目、88 文件哈希全部匹配** |
-| 生成新文件 | `export_xlsx`（6 表 xlsx）、`export_freecad`（布置 FCStd+STEP）、`pid`（A1 P&ID）、`pid_data`（管线表/MTO/仪表索引/IO/C&E）、`equipment_datasheet`（设备数据表 DOCX/PDF/JSON）、`relief_sizing`（安全阀/爆破片计算书）、`hazop_lopa`（HAZOP/LOPA 工作表）、`compliance_matrix`（标准符合性矩阵 xlsx/docx/json）、`cad_part`（A3 设备图 + FCStd/STEP + BOM）、`dwsim`（外部 DWSIM 求解结果 JSON/CSV） |
-| P&ID / CAD | 案例 A 已生成 **A1 P&ID**（19 节点/24 边、5 仪表、3 控制阀，规则校验通过；不按比例）与 R-101/T-101 **A3 设备图**（壁厚按 GB/T 150.1 简化式计算：R-101 6 mm、T-101 6 mm；含接管表/设计数据/标题栏）；规则与限制见 `docs/DRAWING.md` |
-| 外部工具 | LibreOffice 26.8.1.1、FreeCAD 1.1.4（`freecadcmd --version` 正常）、DWSIM 9.0.5、uv 0.13.5、`.venv-sim`（pyomo/rdkit/idaes）已安装 |
-| 面板注册 | `sidebar.panellist` 与 `main` 槽位中 `chemellm` 均 active（来自实时页面 inspect） |
-| enforce 门禁 | 内核 `CHEMELLM_PHASE_GATE=enforce`：intake 阶段调用 `material_balance` → HTTP 409；补齐依据后 → HTTP 200。插件侧经覆盖包实测：requirements 阶段 `chem_calc` 被守卫拒绝，移除覆盖包后回退 advisory（放行 + 警告） |
-| review 规则 | 负例项目正确报告「依据数值缺少单位/条件/来源/理由」「成果计划缺少对应文件」；演示项目复检 ready，未校验计算进入 warnings |
-| 成果包校验 | `scripts/verify_bundle.py`：演示 zip 13 条目、manifest 7 文件哈希全部匹配（VERIFY OK） |
-| 项目删除 | `DELETE /v1/projects/<id>` 实测 200（清理 smoke 项目）；修复了归档 schema 的 FK 依赖 |
-| 端到端 | 示例项目走到 `done`：校核 `ready=true` 后打包 296 KB zip；中间曾正确拦截“B03 未映射到成果” |
-| Office 预览 | ⚠️ LibreOffice 已装且手工转换成功，但内核在 DSH 沙箱内触发的 headless 转换会挂起；DOCX 预览回退文本，PDF 直出不受影响 |
-| 视觉截图 | **未完成**：DSH 对非 GUI 浏览器返回 `403 Browser access is disabled`，无法用 Playwright 截图；面板渲染请在 GUI 内刷新后目视确认 |
+| 可执行工具 | **60 个**（本机 `/v1/tools` 实测；含 22 类计算、12 个证据工具、12 个主域工具，以及 P&ID/数据表/安全阀/HAZOP/合规矩阵等） |
+| 案例 A（苯乙烯清洁生产） | 35 条要求、18 项成果计划、28 条计算、88 个文件；校核 `ready=true`，打包后哈希全部匹配 |
+| 案例 B（苯-甲苯精馏） | 6 条要求、4 项成果、14 个文件；校核 `ready=true`，哈希全部匹配 |
+| 全链路冒烟 | 建项目 → 要求 → 计划 → 依据 → 计算 → 报告 → 校核 → 打包 通过 |
+| DWSIM 接入 | DWSIM 9.0.5 加载自带 Cavett 算例，求解成功，输出 20 条物流、15 个单元操作 |
+| 阶段门禁 | 内核 enforce：越阶段 409，补齐 200；插件侧拦截与回退均实测 |
 
 ## 边界与限制（v0.1）
 
-- 单用户、单机、loopback；没有多租户/权限/计费。`token` 为空时本机任意进程都能访问内核，介意时请设置。
-- 自动校核 ≠ 专业审核；`chem_review` 只做数据与文件层面的自动检查。
-- 外部软件：DWSIM 9.0.5 已通过外部自动化接入（加载/求解 `.dwxmz/.dwxml`，输出 JSON/CSV；不创建/编辑流程图）；FreeCAD 参数化三维已接入（FCStd/STEP）；P&ID 已升级为 A1 规范化示意（图框/标题栏/设备表/仪表阀门表/管线表，不按比例）；商业软件（Aspen/Icarus/PV Elite/AutoCAD）未授权。
-- 域工具映射：22 个计算模型、12 个证据/检索工具、报告与图纸生成已覆盖；其余旧工具（`equipment_save/query`、`drawing_read`、`dataset_inspect/analyze_dataset` 等）通过 `chem_tool` 透传调用。
-- Office 预览：LibreOffice 已安装，但在 DSH 沙箱内由内核触发的转换会挂起；建议在普通终端启动内核后再试，或直接用请求的 PDF 输出。
-- 计算模型沿用原项目范围与假设（如 PR kij=0、理想精馏、UNIFAC 预测等），结果需工程判断。
-- 原项目 `old/web`、`old/Dockerfile`、云部署脚本仅作归档，不参与本地运行。
+- **单机单用户**：内核只监听 loopback；`token` 为空时本机任意进程都能访问，介意请设置 `CHEMELLM_KERNEL_TOKEN`。
+- **自动校核 ≠ 专业审核**：`chem_review` 只做数据与文件层面的检查，审核状态恒为 `not_reviewed`，不能当签审结论。
+- **P&ID 为规范化示意图**：不按比例，不作施工图，也没有管道等级库、off-page 接续、仪表量程等完整工程属性。
+- **模型假设有限**：部分模型仅覆盖乙苯-苯乙烯体系，精馏按理想 Raoult 处理，缺少动力学、塔水力学与详细设备设计。
+- **外部软件可选**：FreeCAD（三维/STEP）、LibreOffice（Office 预览）、DWSIM（稳态模拟）不随仓库分发，需自行安装；未授权使用 Aspen、Icarus、PV Elite、AutoCAD 等商业软件。
+- **Office 预览受限**：沙箱内由内核触发的 LibreOffice 转换可能挂起，DOCX 预览回退为文本，PDF 直出不受影响。
+- **标准原文不入库**：`standards/` 下的 GB/T、HG/T 等标准 PDF 属第三方版权资料，需本地自备，不在版本库中。
 
-## 原项目关系
+## 文档索引
 
-原 ChemELLM（九页 Web、自研 agent 循环、云端 Docker 部署）已整体移入 `old/`。本版本只保留其**计算与工程数据能力**作为内核，把**交互、编排、UI**交给 DSH：会话历史、模型调用、审批、子代理都由 DSH 提供，不再自研。
+| 文件 | 内容 |
+|---|---|
+| [docs/QUICKSTART.md](docs/QUICKSTART.md) | 最短路径上手 |
+| [docs/USER_GUIDE.md](docs/USER_GUIDE.md) | 完整使用教程：面板、12 个工具、典型工作流、故障排查 |
+| [docs/TOOLS.md](docs/TOOLS.md) | 工具清单、外部软件版本与许可证 |
+| [docs/DRAWING.md](docs/DRAWING.md) | P&ID 与设备图的数据结构、规则与限制 |
+| [docs/HAZOP.md](docs/HAZOP.md) · [docs/COMPLIANCE.md](docs/COMPLIANCE.md) | HAZOP/LOPA 输入与合规矩阵判定规则 |
+| [docs/STANDARDS.md](docs/STANDARDS.md) · [docs/MANDATORY_GB.md](docs/MANDATORY_GB.md) | 标准登记与强制国标台账 |
+| [docs/DWSIM.md](docs/DWSIM.md) | DWSIM 桥接用法 |
+| [docs/ACCEPTANCE.md](docs/ACCEPTANCE.md) | 逐轮验收记录（含失败与缺项，不删改历史） |
+| [docs/STATUS_v0.1.md](docs/STATUS_v0.1.md) | README 旧版（实现细节与逐项验证状态） |
+
+## 说明
+
+- 本项目为学生非营利项目，尚未选定开源许可证；如需复用代码，请先联系作者。
+- 第三方库与外部软件的版本、许可证见 [docs/TOOLS.md](docs/TOOLS.md)，均按各自条款使用，不随本仓库分发商业软件。
+- 计算与图表结论仅用于教学与方案研究，不替代正式工程设计、安全评价与合规审查。
