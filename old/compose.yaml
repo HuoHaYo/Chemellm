@@ -1,0 +1,26 @@
+services:
+  chemellm:
+    build: .
+    image: chemellm:0.1.0
+    restart: unless-stopped
+    init: true
+    env_file: .env
+    environment:
+      CHEMELLM_DATA_DIR: /app/data
+      CHEMELLM_AUTH_TOKEN: ${CHEMELLM_AUTH_TOKEN:?Set a random workbench access token in .env}
+    ports:
+      - "127.0.0.1:8000:8000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - chemellm-data:/app/data
+    tmpfs:
+      - /tmp:size=512M,mode=1777
+    read_only: true
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    pids_limit: 192
+    mem_limit: 3g
+volumes:
+  chemellm-data:

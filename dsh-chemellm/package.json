@@ -1,0 +1,25 @@
+{
+  "name": "@local/dsh-chemellm",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local chemical-engineering workspace for DeepSeek Harness: project, requirements, basis, calculations, deliverables and review.",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js"
+  },
+  "files": ["index.js", "client.js", "cordis.patch.yml", "icon.svg", "README.md", "runtime"],
+  "meta": {
+    "title": "化工工程",
+    "description": "本地化工工程工作台：项目、要求、依据、计算、成果与验收，全部在 DSH 内完成。"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}

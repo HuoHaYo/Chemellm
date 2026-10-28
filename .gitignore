@@ -1,0 +1,47 @@
+﻿# ---- 虚拟环境 / 缓存 ----
+.venv/
+.venv-sim/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+*.log
+
+# ---- 本机运行数据（内核库、项目状态、成果文件、打包 zip）----
+data/
+.chem/
+dsh-chemellm/chemellm-data/
+
+# ---- 便携运行时（CPython + site-packages，随插件包分发，不进版本库）----
+dsh-chemellm/runtime/
+
+# ---- 打包产物 ----
+dist/
+old/dist/
+
+# ---- 原项目归档中的生成物 ----
+old/data/
+old/output/
+old/.pytest_cache/
+old/.playwright-cli/
+
+# ---- 标准原文（用户提供的付费/受版权保护 PDF，仅本机留存，不入公开仓库）----
+standards/
+
+# ---- 标准页图（由已入库 PDF 渲染生成，可复现）----
+standards/*-pages/
+standards/HGT20519/
+
+# ---- pip 临时目录（本机安装残留）----
+pip-*/
+pip-unpack-*/
+pip-target-*/
+pip-install-*/
+pip-build-tracker-*/
+pip-ephem-wheel-cache-*/
+
+# ---- 系统与 Office 临时文件 ----
+~$*
+Thumbs.db
+.DS_Store

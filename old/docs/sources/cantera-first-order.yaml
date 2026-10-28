@@ -1,0 +1,23 @@
+description: |
+  Manufactured numerical qualification fixture, NOT chemical species/mechanism.
+  A and B have identical argon mass; B has lower reference enthalpy.
+  The exact A mole fraction is exp(-2*t). No real kinetics is asserted.
+units: {length: m, time: s, quantity: kmol, activation-energy: J/kmol}
+phases:
+- name: qualification
+  thermo: ideal-gas
+  elements: [Ar]
+  species: [A, B]
+  kinetics: gas
+  reactions: all
+  state: {T: 800, P: 101325, X: {A: 1}}
+species:
+- name: A
+  composition: {Ar: 1}
+  thermo: {model: constant-cp, T0: 300 K, h0: 0 J/kmol, s0: 0 J/kmol/K, cp0: 20000 J/kmol/K}
+- name: B
+  composition: {Ar: 1}
+  thermo: {model: constant-cp, T0: 300 K, h0: -1000000 J/kmol, s0: 0 J/kmol/K, cp0: 20000 J/kmol/K}
+reactions:
+- equation: A => B
+  rate-constant: {A: 2.0, b: 0, Ea: 0}

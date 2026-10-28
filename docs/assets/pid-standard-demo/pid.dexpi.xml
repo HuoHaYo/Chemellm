@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ChemELLM DEXPI-style subset: NOT a certified DEXPI 2.0 document. -->
+<DEXPI xmlns="http://www.dexpi.org/schemas/dexpi/2.0" Version="subset-0.1" Diagram="PID-2026-101">
+  <Equipment>
+    <Equipment id="TK-101" type="tank" label="乙苯原料罐" spec="V=200 m³" material="Q345R"/>
+    <Equipment id="P-101" type="pump" label="进料泵" spec="Q=30 m³/h" material="304"/>
+    <Equipment id="E-101" type="exchanger" label="原料预热器" spec="A=120 m²" material="Q345R"/>
+    <Equipment id="R-101" type="reactor" label="脱氢反应器" spec="DN3000×12000" material="0Cr18Ni9"/>
+    <Equipment id="E-102" type="exchanger" label="产物冷却器" spec="A=450 m²" material="Q345R"/>
+    <Equipment id="V-101" type="tank" label="冷凝分相器" spec="V=60 m³" material="Q345R"/>
+    <Equipment id="T-101" type="column" label="乙苯/苯乙烯塔" spec="DN2400×20000" material="Q345R"/>
+    <Equipment id="TK-102" type="tank" label="苯乙烯产品罐" spec="V=150 m³" material="Q345R"/>
+    <Equipment id="TK-103" type="tank" label="氢气/尾气" spec="V=20 m³" material="Q345R"/>
+    <Equipment id="TK-104" type="tank" label="工艺水" spec="V=100 m³" material="Q345R"/>
+    <Equipment id="H-101" type="tank" label="中压蒸汽" spec="DN250" material="Q345R"/>
+    <Equipment id="FV-101" type="control_valve" label="FV 蒸汽" spec="DN50 PN16" material=""/>
+    <Equipment id="PV-101" type="control_valve" label="PV 放空" spec="DN50 PN16" material=""/>
+    <Equipment id="LV-101" type="control_valve" label="LV 回流" spec="DN80 PN16" material=""/>
+  </Equipment>
+  <Instrumentation>
+    <Instrument id="TI-101" label="TI 温度" type="热电偶"/>
+    <Instrument id="TIC-101" label="TIC 温控" type="DCS"/>
+    <Instrument id="FIC-101" label="FIC 流量" type="DCS"/>
+    <Instrument id="PIC-101" label="PIC 压力" type="DCS"/>
+    <Instrument id="LIC-101" label="LIC 液位" type="DCS"/>
+  </Instrumentation>
+  <PipingNetworkSystem>
+    <Connection from="TK-101" to="P-101" lineNumber="PL-101-100-A1A" medium="乙苯"/>
+    <Connection from="P-101" to="E-101" lineNumber="PL-102-100-A1A" medium="乙苯"/>
+    <Connection from="E-101" to="R-101" lineNumber="PL-103-80-A1A" medium="乙苯+蒸汽"/>
+    <Connection from="R-101" to="E-102" lineNumber="PL-104-80-A1A" medium="反应产物"/>
+    <Connection from="E-102" to="V-101" lineNumber="PL-105-100-A1A" medium="冷凝液"/>
+    <Connection from="V-101" to="T-101" lineNumber="PL-106-80-A1A" medium="有机相"/>
+    <Connection from="T-101" to="TK-102" lineNumber="PL-107-50-A1A" medium="苯乙烯"/>
+    <Connection from="V-101" to="TK-103" lineNumber="PL-108-50-A1A" medium="氢气"/>
+    <Connection from="V-101" to="TK-104" lineNumber="PL-109-50-A1A" medium="工艺水"/>
+    <Connection from="H-101" to="FV-101" lineNumber="PL-110-50-A1A" medium="蒸汽"/>
+    <Connection from="FV-101" to="R-101" lineNumber="PL-111-50-A1A" medium="蒸汽"/>
+    <Connection from="V-101" to="LV-101" lineNumber="PL-112-80-A1A" medium="苯乙烯"/>
+    <Connection from="LV-101" to="T-101" lineNumber="PL-113-80-A1A" medium="苯乙烯"/>
+    <Connection from="R-101" to="PV-101" lineNumber="PL-114-80-A1A" medium="反应气"/>
+    <Connection from="PV-101" to="TK-103" lineNumber="PL-115-80-A1A" medium="反应气"/>
+  </PipingNetworkSystem>
+  <SignalConnections>
+    <Signal kind="signal" from="TIC-101" to="R-101" label=""/>
+    <Signal kind="signal" from="TIC-101" to="FV-101" label=""/>
+    <Signal kind="signal" from="TI-101" to="R-101" label=""/>
+    <Signal kind="signal" from="FIC-101" to="FV-101" label=""/>
+    <Signal kind="signal" from="FIC-101" to="P-101" label=""/>
+    <Signal kind="signal" from="PIC-101" to="PV-101" label=""/>
+    <Signal kind="signal" from="LIC-101" to="LV-101" label=""/>
+    <Signal kind="interlock" from="TIC-101" to="R-101" label="I-1"/>
+    <Signal kind="interlock" from="PIC-101" to="R-101" label="I-2"/>
+  </SignalConnections>
+</DEXPI>

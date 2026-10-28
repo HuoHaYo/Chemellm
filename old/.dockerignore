@@ -1,0 +1,13 @@
+.git
+.env
+测试用deepseek.txt
+.venv
+data
+dist
+test-results
+tests
+**/__pycache__
+**/*.egg-info
+.pytest_cache
+*-docs.html
+openai-function-calling.html

@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+测试用deepseek.txt
+data/
+dist/
+*.egg-info/
+test-results/
+*.html.tmp

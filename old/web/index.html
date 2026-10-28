@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fafafa">
+  <title>ChemELLM · 化工研究工作台</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip-link" href="#content">跳到主要内容</a>
+<button class="sidebar-backdrop" id="sidebar-backdrop" aria-label="关闭导航" tabindex="-1" hidden></button>
+<aside class="sidebar" id="sidebar" aria-label="项目与导航">
+  <div class="sidebar-heading">
+    <a class="brand" href="/" aria-label="ChemELLM 首页"><svg class="brand-icon" aria-hidden="true"><use href="/icons.svg#brand"></use></svg><span>ChemELLM</span></a>
+    <button id="sidebar-close" class="icon-button" title="收起侧栏" aria-label="收起侧栏"><svg class="icon" aria-hidden="true"><use href="/icons.svg#panel-left"></use></svg></button>
+  </div>
+  <button id="new-project" class="new-project"><svg class="icon" aria-hidden="true"><use href="/icons.svg#plus"></use></svg>新建项目</button>
+  <div class="project-switcher" hidden>
+    <label class="nav-label" for="project-select">当前项目</label>
+    <div class="project-select-wrap"><svg class="icon" aria-hidden="true"><use href="/icons.svg#folder"></use></svg><select id="project-select" aria-label="当前项目"></select><svg class="icon select-chevron" aria-hidden="true"><use href="/icons.svg#chevron-down"></use></svg></div>
+  </div>
+  <section class="project-tree" aria-label="项目与会话"><div class="project-tree-heading"><span class="nav-label">项目</span><button class="icon-button" id="new-conversation" title="新建会话" aria-label="新建会话"><svg class="icon" aria-hidden="true"><use href="/icons.svg#message"></use></svg></button></div><div id="project-list"><div class="loading">加载项目…</div></div></section>
+  <nav class="bottom-navigation" aria-label="主要导航">
+    <div class="nav-group">
+      <div class="nav-label">工作空间</div>
+      <button data-page="workspace" class="nav-item active" aria-current="page"><svg class="icon" aria-hidden="true"><use href="/icons.svg#message"></use></svg>设计对话</button>
+      <button data-page="study" class="nav-item"><svg class="icon" aria-hidden="true"><use href="/icons.svg#workflow"></use></svg>研究任务</button>
+      <button data-page="files" class="nav-item"><svg class="icon" aria-hidden="true"><use href="/icons.svg#files"></use></svg>文件与图纸</button>
+    </div>
+    <div class="nav-group">
+      <div class="nav-label">研究工具</div>
+      <button data-page="tools" class="nav-item"><svg class="icon" aria-hidden="true"><use href="/icons.svg#calculator"></use></svg>工具与计算</button>
+      <button data-page="research" class="nav-item"><svg class="icon" aria-hidden="true"><use href="/icons.svg#search"></use></svg>文献检索</button>
+      <button data-page="evidence" class="nav-item"><svg class="icon" aria-hidden="true"><use href="/icons.svg#book"></use></svg>全文证据</button>
+      <button data-page="datasets" class="nav-item"><svg class="icon" aria-hidden="true"><use href="/icons.svg#chart"></use></svg>实验数据</button>
+    </div>
+    <div class="nav-group">
+      <div class="nav-label">项目管理</div>
+      <button data-page="database" class="nav-item"><svg class="icon" aria-hidden="true"><use href="/icons.svg#database"></use></svg>工程数据库</button>
+      <button data-page="acceptance" class="nav-item"><svg class="icon" aria-hidden="true"><use href="/icons.svg#checklist"></use></svg>赛题验收</button>
+    </div>
+  </nav>
+  <div class="sidebar-bottom">
+    <button id="settings-button" class="workspace-account"><span class="account-avatar">C</span><span class="account-copy"><strong>化工研究空间</strong><span id="model-status">正在检查模型配置</span></span><svg class="icon" aria-hidden="true"><use href="/icons.svg#settings"></use></svg></button>
+  </div>
+</aside>
+<div class="shell">
+  <header class="topbar">
+    <div class="header-location"><button id="sidebar-toggle" class="icon-button" aria-label="展开侧栏" aria-controls="sidebar" aria-expanded="true" title="展开侧栏"><svg class="icon" aria-hidden="true"><use href="/icons.svg#panel-left"></use></svg></button><span id="project-name" class="project-breadcrumb">加载项目…</span><span class="slash" aria-hidden="true">/</span><strong id="page-name">设计对话</strong></div>
+    <div class="header-actions"><button id="conversation-settings" class="icon-button" title="会话名称与关联任务" aria-label="会话设置"><svg class="icon" aria-hidden="true"><use href="/icons.svg#settings"></use></svg></button><button id="upload-button" class="button secondary small"><svg class="icon" aria-hidden="true"><use href="/icons.svg#upload"></use></svg><span>上传资料</span></button><button id="project-overview-button" class="icon-button" title="任务资源" aria-label="任务资源" aria-controls="project-dialog" aria-expanded="false"><svg class="icon" aria-hidden="true"><use href="/icons.svg#panel-right"></use></svg></button><input id="upload" type="file" hidden accept=".pdf,.docx,.pptx,.txt,.md,.csv,.xlsx,.xml,.json,.svg,.dxf,.png,.jpg,.jpeg"></div>
+  </header>
+  <main id="content" tabindex="-1" aria-label="项目工作区"></main>
+  <footer>研究结果请结合数据来源、模型假设与工程校核使用。</footer>
+</div>
+<aside id="project-dialog" class="context-drawer resource-drawer" aria-labelledby="project-overview-title" hidden><div class="dialog-bar"><strong id="project-overview-title">任务资源</strong><button class="icon-button" data-close-resources aria-label="关闭任务资源"><svg class="icon" aria-hidden="true"><use href="/icons.svg#close"></use></svg></button></div><div id="project-overview"></div><section id="resource-preview" hidden aria-label="资源预览"><div class="resource-preview-bar"><strong id="resource-preview-title"></strong><button class="icon-button" data-expand-resource title="放大预览" aria-label="放大预览"><svg class="icon" aria-hidden="true"><use href="/icons.svg#panel-right"></use></svg></button><button class="icon-button" data-close-resource-preview aria-label="关闭资源预览"><svg class="icon" aria-hidden="true"><use href="/icons.svg#close"></use></svg></button></div><iframe id="resource-preview-frame" title="任务资源预览"></iframe></section></aside>
+<dialog id="preview-dialog" aria-labelledby="preview-title"><div class="dialog-bar"><strong id="preview-title"></strong><div><a id="preview-download" class="button secondary small" download>下载原文件 ↓</a><button class="icon-button" data-close="preview-dialog" aria-label="关闭预览"><svg class="icon" aria-hidden="true"><use href="/icons.svg#close"></use></svg></button></div></div><iframe id="preview-frame" title="文件预览"></iframe></dialog>
+<dialog id="form-dialog" aria-labelledby="form-title"><div class="dialog-bar"><strong id="form-title"></strong><button class="icon-button" data-close="form-dialog" aria-label="关闭"><svg class="icon" aria-hidden="true"><use href="/icons.svg#close"></use></svg></button></div><div id="form-body"></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="/app.js"></script>
+</body>
+</html>

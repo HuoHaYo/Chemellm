@@ -1,0 +1,160 @@
+{
+  "scope": "External thermodynamic correlation comparison and solver numerical qualification, not experimental kinetics validation or an LLM held-out test",
+  "frozen_before_cantera_comparison": true,
+  "date": "2026-10-20",
+  "temperatures_K": [
+    600.0,
+    1000.0,
+    1500.0
+  ],
+  "reaction": "CO + H2O <=> CO2 + H2",
+  "initial_relative_moles": {
+    "CO": 1.0,
+    "H2O": 1.0,
+    "CO2": 0.1,
+    "H2": 0.1
+  },
+  "pressure_Pa": 101325.0,
+  "tolerances": {
+    "species_Cp_relative": 0.02,
+    "reaction_enthalpy_absolute_J_mol": 500.0,
+    "Kp_relative": 0.03,
+    "reaction_extent_absolute_mol_per_initial_CO_mol": 0.0075,
+    "analytic_first_order_mole_fraction_absolute": 2e-07,
+    "analytic_reactor_temperature_absolute_K": 0.0002
+  },
+  "tolerance_rationale": "Initial screening limits for differences between NASA and independently implemented NIST Shomate correlations; not experimental confidence intervals. Failure remains failure; do not tune limits to results.",
+  "sources": {
+    "CO": {
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C630080&Units=SI&Mask=1",
+      "source_file": "docs/sources/nist-wgs/CO.html",
+      "sha256": "20041acc3d874c2ec91ab2532d6a557f1e1d2629886a9f05931b880b32c19f90",
+      "method": "NIST Shomate, Chase 1998",
+      "coefficients": [
+        {
+          "range_text_K": "298. to 1300.",
+          "A": 25.56759,
+          "B": 6.09613,
+          "C": 4.054656,
+          "D": -2.671301,
+          "E": 0.131021,
+          "F": -118.0089,
+          "G": 227.3665,
+          "H": -110.5271
+        },
+        {
+          "range_text_K": "1300. to 6000.",
+          "A": 35.1507,
+          "B": 1.300095,
+          "C": -0.205921,
+          "D": 0.01355,
+          "E": -3.28278,
+          "F": -127.8375,
+          "G": 231.712,
+          "H": -110.5271
+        }
+      ]
+    },
+    "CO2": {
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C124389&Units=SI&Mask=1",
+      "source_file": "docs/sources/nist-wgs/CO2.html",
+      "sha256": "c2cd65d85708550b912d835dec00c5d3fe99e5928dc02ed386ebf8915383f572",
+      "method": "NIST Shomate, Chase 1998",
+      "coefficients": [
+        {
+          "range_text_K": "298. to 1200.",
+          "A": 24.99735,
+          "B": 55.18696,
+          "C": -33.69137,
+          "D": 7.948387,
+          "E": -0.136638,
+          "F": -403.6075,
+          "G": 228.2431,
+          "H": -393.5224
+        },
+        {
+          "range_text_K": "1200. to 6000.",
+          "A": 58.16639,
+          "B": 2.720074,
+          "C": -0.492289,
+          "D": 0.038844,
+          "E": -6.447293,
+          "F": -425.9186,
+          "G": 263.6125,
+          "H": -393.5224
+        }
+      ]
+    },
+    "H2O": {
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&Units=SI&Mask=1",
+      "source_file": "docs/sources/nist-wgs/H2O.html",
+      "sha256": "a2fdfa45eb1ab6208b23becde0cb2c3773d3c69f50805a1e7104d1c7f6f75427",
+      "method": "NIST Shomate, Chase 1998",
+      "coefficients": [
+        {
+          "range_text_K": "500. to 1700.",
+          "A": 30.092,
+          "B": 6.832514,
+          "C": 6.793435,
+          "D": -2.53448,
+          "E": 0.082139,
+          "F": -250.881,
+          "G": 223.3967,
+          "H": -241.8264
+        },
+        {
+          "range_text_K": "1700. to 6000.",
+          "A": 41.96426,
+          "B": 8.622053,
+          "C": -1.49978,
+          "D": 0.098119,
+          "E": -11.15764,
+          "F": -272.1797,
+          "G": 219.7809,
+          "H": -241.8264
+        }
+      ]
+    },
+    "H2": {
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C1333740&Units=SI&Mask=1",
+      "source_file": "docs/sources/nist-wgs/H2.html",
+      "sha256": "3ce23285765cd952ca5906fd833e16aaa4badfd71684e4e419def0718d059bdb",
+      "method": "NIST Shomate, Chase 1998",
+      "coefficients": [
+        {
+          "range_text_K": "298. to 1000.",
+          "A": 33.066178,
+          "B": -11.363417,
+          "C": 11.432816,
+          "D": -2.772874,
+          "E": -0.158558,
+          "F": -9.980797,
+          "G": 172.707974,
+          "H": 0.0
+        },
+        {
+          "range_text_K": "1000. to 2500.",
+          "A": 18.563083,
+          "B": 12.257357,
+          "C": -2.859786,
+          "D": 0.268238,
+          "E": 1.97799,
+          "F": -1.147438,
+          "G": 156.288133,
+          "H": 0.0
+        },
+        {
+          "range_text_K": "2500. to 6000.",
+          "A": 43.41356,
+          "B": -4.293079,
+          "C": 1.272428,
+          "D": -0.096876,
+          "E": -20.533862,
+          "F": -38.515158,
+          "G": 162.081354,
+          "H": 0.0
+        }
+      ]
+    }
+  }
+}

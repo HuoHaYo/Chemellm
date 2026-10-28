@@ -1,0 +1,414 @@
+{
+  "title": "乙苯脱氢制苯乙烯 · 工艺管道及仪表流程图",
+  "drawing_number": "PID-2026-101",
+  "revision": "B",
+  "project": "案例A · 2026赛题（P&ID 规范化示例）",
+  "designer": "霍昊塬",
+  "checker": "待校核",
+  "approver": "待审核",
+  "date": "2026-10-26",
+  "revision_note": "规范化升版：符号/管线标注/标题栏",
+  "nodes": [
+    {
+      "id": "TK-101",
+      "kind": "tank",
+      "label": "乙苯原料罐",
+      "x": 90,
+      "y": 300,
+      "spec": "V=200 m³",
+      "material": "Q345R"
+    },
+    {
+      "id": "P-101",
+      "kind": "pump",
+      "label": "进料泵",
+      "x": 230,
+      "y": 300,
+      "spec": "Q=30 m³/h",
+      "material": "304"
+    },
+    {
+      "id": "E-101",
+      "kind": "exchanger",
+      "label": "原料预热器",
+      "x": 380,
+      "y": 300,
+      "spec": "A=120 m²",
+      "material": "Q345R"
+    },
+    {
+      "id": "R-101",
+      "kind": "reactor",
+      "label": "脱氢反应器",
+      "x": 560,
+      "y": 300,
+      "spec": "DN3000×12000",
+      "material": "0Cr18Ni9"
+    },
+    {
+      "id": "E-102",
+      "kind": "exchanger",
+      "label": "产物冷却器",
+      "x": 760,
+      "y": 300,
+      "spec": "A=450 m²",
+      "material": "Q345R"
+    },
+    {
+      "id": "V-101",
+      "kind": "tank",
+      "label": "冷凝分相器",
+      "x": 940,
+      "y": 300,
+      "spec": "V=60 m³",
+      "material": "Q345R"
+    },
+    {
+      "id": "T-101",
+      "kind": "column",
+      "label": "乙苯/苯乙烯塔",
+      "x": 1140,
+      "y": 300,
+      "spec": "DN2400×20000",
+      "material": "Q345R",
+      "internals": "塔板"
+    },
+    {
+      "id": "TK-102",
+      "kind": "tank",
+      "label": "苯乙烯产品罐",
+      "x": 1140,
+      "y": 720,
+      "spec": "V=150 m³",
+      "material": "Q345R"
+    },
+    {
+      "id": "TK-103",
+      "kind": "tank",
+      "label": "氢气/尾气",
+      "x": 760,
+      "y": 720,
+      "spec": "V=20 m³",
+      "material": "Q345R"
+    },
+    {
+      "id": "TK-104",
+      "kind": "tank",
+      "label": "工艺水",
+      "x": 900,
+      "y": 720,
+      "spec": "V=100 m³",
+      "material": "Q345R"
+    },
+    {
+      "id": "H-101",
+      "kind": "tank",
+      "label": "中压蒸汽",
+      "x": 90,
+      "y": 120,
+      "spec": "DN250",
+      "material": "Q345R"
+    },
+    {
+      "id": "TI-101",
+      "kind": "instrument",
+      "label": "TI 温度",
+      "x": 600,
+      "y": 560,
+      "type": "热电偶",
+      "range": "0~800 ℃"
+    },
+    {
+      "id": "TIC-101",
+      "kind": "instrument",
+      "label": "TIC 温控",
+      "x": 500,
+      "y": 560,
+      "type": "DCS",
+      "interlock": "I-1 高温联锁",
+      "range": "0~800 ℃"
+    },
+    {
+      "id": "FIC-101",
+      "kind": "instrument",
+      "label": "FIC 流量",
+      "x": 230,
+      "y": 560,
+      "type": "DCS",
+      "range": "0~50 t/h"
+    },
+    {
+      "id": "PIC-101",
+      "kind": "instrument",
+      "label": "PIC 压力",
+      "x": 740,
+      "y": 560,
+      "type": "DCS",
+      "interlock": "I-2 超压联锁",
+      "range": "0~1.0 MPa"
+    },
+    {
+      "id": "LIC-101",
+      "kind": "instrument",
+      "label": "LIC 液位",
+      "x": 1060,
+      "y": 560,
+      "type": "DCS",
+      "range": "0~100%"
+    },
+    {
+      "id": "FV-101",
+      "kind": "control_valve",
+      "label": "FV 蒸汽",
+      "x": 380,
+      "y": 120,
+      "spec": "DN50 PN16"
+    },
+    {
+      "id": "PV-101",
+      "kind": "control_valve",
+      "label": "PV 放空",
+      "x": 720,
+      "y": 120,
+      "spec": "DN50 PN16"
+    },
+    {
+      "id": "LV-101",
+      "kind": "control_valve",
+      "label": "LV 回流",
+      "x": 940,
+      "y": 120,
+      "spec": "DN80 PN16"
+    }
+  ],
+  "edges": [
+    {
+      "source": "TK-101",
+      "target": "P-101",
+      "label": "S01",
+      "line_no": "PL-101-100-A1A",
+      "kind": "process",
+      "medium": "乙苯",
+      "spec": "DN100",
+      "piping_class": "A1A",
+      "insulation": "—",
+      "valves": [
+        {
+          "type": "gate",
+          "tag": "HV-101",
+          "position": 0.55
+        }
+      ]
+    },
+    {
+      "source": "P-101",
+      "target": "E-101",
+      "label": "S02",
+      "line_no": "PL-102-100-A1A",
+      "kind": "process",
+      "medium": "乙苯",
+      "spec": "DN100",
+      "piping_class": "A1A",
+      "insulation": "—",
+      "valves": [
+        {
+          "type": "check",
+          "tag": "CV-101",
+          "position": 0.35
+        }
+      ]
+    },
+    {
+      "source": "E-101",
+      "target": "R-101",
+      "label": "S03",
+      "line_no": "PL-103-80-A1A",
+      "kind": "process",
+      "medium": "乙苯+蒸汽",
+      "spec": "DN80",
+      "piping_class": "A1A",
+      "insulation": "—"
+    },
+    {
+      "source": "R-101",
+      "target": "E-102",
+      "label": "S04",
+      "line_no": "PL-104-80-A1A",
+      "kind": "process",
+      "medium": "反应产物",
+      "spec": "DN80",
+      "piping_class": "A1A",
+      "insulation": "—"
+    },
+    {
+      "source": "E-102",
+      "target": "V-101",
+      "label": "S05",
+      "line_no": "PL-105-100-A1A",
+      "kind": "process",
+      "medium": "冷凝液",
+      "spec": "DN100",
+      "piping_class": "A1A",
+      "insulation": "—"
+    },
+    {
+      "source": "V-101",
+      "target": "T-101",
+      "label": "S06",
+      "line_no": "PL-106-80-A1A",
+      "kind": "process",
+      "medium": "有机相",
+      "spec": "DN80",
+      "piping_class": "A1A",
+      "insulation": "—"
+    },
+    {
+      "source": "T-101",
+      "target": "TK-102",
+      "label": "S07",
+      "line_no": "PL-107-50-A1A",
+      "kind": "process",
+      "medium": "苯乙烯",
+      "spec": "DN50",
+      "piping_class": "A1A",
+      "insulation": "—"
+    },
+    {
+      "source": "V-101",
+      "target": "TK-103",
+      "label": "S08 尾气",
+      "line_no": "PL-108-50-A1A",
+      "kind": "process",
+      "medium": "氢气",
+      "spec": "DN50",
+      "piping_class": "A1A",
+      "insulation": "—"
+    },
+    {
+      "source": "V-101",
+      "target": "TK-104",
+      "label": "S09 水相",
+      "line_no": "PL-109-50-A1A",
+      "kind": "process",
+      "medium": "工艺水",
+      "spec": "DN50",
+      "piping_class": "A1A",
+      "insulation": "—"
+    },
+    {
+      "source": "H-101",
+      "target": "FV-101",
+      "label": "中压蒸汽",
+      "line_no": "PL-110-50-A1A",
+      "kind": "process",
+      "medium": "蒸汽",
+      "spec": "DN50",
+      "piping_class": "A1A",
+      "insulation": "保温",
+      "tracing": "伴热"
+    },
+    {
+      "source": "FV-101",
+      "target": "R-101",
+      "label": "蒸汽进料",
+      "line_no": "PL-111-50-A1A",
+      "kind": "process",
+      "medium": "蒸汽",
+      "spec": "DN50",
+      "piping_class": "A1A",
+      "insulation": "保温",
+      "tracing": "伴热"
+    },
+    {
+      "source": "V-101",
+      "target": "LV-101",
+      "label": "回流",
+      "line_no": "PL-112-80-A1A",
+      "kind": "process",
+      "medium": "苯乙烯",
+      "spec": "DN80",
+      "piping_class": "A1A",
+      "insulation": "—"
+    },
+    {
+      "source": "LV-101",
+      "target": "T-101",
+      "label": "回流",
+      "line_no": "PL-113-80-A1A",
+      "kind": "process",
+      "medium": "苯乙烯",
+      "spec": "DN80",
+      "piping_class": "A1A",
+      "insulation": "—"
+    },
+    {
+      "source": "R-101",
+      "target": "PV-101",
+      "label": "塔顶气",
+      "line_no": "PL-114-80-A1A",
+      "kind": "process",
+      "medium": "反应气",
+      "spec": "DN80",
+      "piping_class": "A1A",
+      "insulation": "—"
+    },
+    {
+      "source": "PV-101",
+      "target": "TK-103",
+      "label": "放空",
+      "line_no": "PL-115-80-A1A",
+      "kind": "process",
+      "medium": "反应气",
+      "spec": "DN80",
+      "piping_class": "A1A",
+      "insulation": "—"
+    },
+    {
+      "source": "TIC-101",
+      "target": "R-101",
+      "kind": "signal"
+    },
+    {
+      "source": "TIC-101",
+      "target": "FV-101",
+      "kind": "signal"
+    },
+    {
+      "source": "TI-101",
+      "target": "R-101",
+      "kind": "signal"
+    },
+    {
+      "source": "FIC-101",
+      "target": "FV-101",
+      "kind": "signal"
+    },
+    {
+      "source": "FIC-101",
+      "target": "P-101",
+      "kind": "signal"
+    },
+    {
+      "source": "PIC-101",
+      "target": "PV-101",
+      "kind": "signal"
+    },
+    {
+      "source": "LIC-101",
+      "target": "LV-101",
+      "kind": "signal"
+    },
+    {
+      "source": "TIC-101",
+      "target": "R-101",
+      "label": "I-1",
+      "kind": "interlock"
+    },
+    {
+      "source": "PIC-101",
+      "target": "R-101",
+      "label": "I-2",
+      "kind": "interlock"
+    }
+  ]
+}

@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="841.0mm" height="594.0mm" viewBox="0 0 841.0 594.0">
+<rect width="841.0" height="594.0" fill="#ffffff"/>
+<rect x="0.00" y="0.00" width="841.00" height="594.00" rx="0.00" fill="#ffffff" stroke="none" stroke-width="0.00"/>
+<rect x="25.00" y="10.00" width="806.00" height="574.00" rx="0.00" fill="none" stroke="#1f3b57" stroke-width="0.70"/>
+<rect x="29.00" y="14.00" width="798.00" height="566.00" rx="0.00" fill="none" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="29.00" y1="14.00" x2="29.00" y2="17.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="29.00" y1="577.00" x2="29.00" y2="580.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="128.75" y1="14.00" x2="128.75" y2="17.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="128.75" y1="577.00" x2="128.75" y2="580.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="228.50" y1="14.00" x2="228.50" y2="17.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="228.50" y1="577.00" x2="228.50" y2="580.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="328.25" y1="14.00" x2="328.25" y2="17.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="328.25" y1="577.00" x2="328.25" y2="580.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="428.00" y1="14.00" x2="428.00" y2="17.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="428.00" y1="577.00" x2="428.00" y2="580.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="527.75" y1="14.00" x2="527.75" y2="17.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="527.75" y1="577.00" x2="527.75" y2="580.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="627.50" y1="14.00" x2="627.50" y2="17.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="627.50" y1="577.00" x2="627.50" y2="580.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="727.25" y1="14.00" x2="727.25" y2="17.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="727.25" y1="577.00" x2="727.25" y2="580.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="827.00" y1="14.00" x2="827.00" y2="17.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="827.00" y1="577.00" x2="827.00" y2="580.00" stroke="#1f3b57" stroke-width="0.35"/>
+<text x="78.88" y="16.40" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">1</text>
+<text x="78.88" y="579.20" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">1</text>
+<text x="178.62" y="16.40" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">2</text>
+<text x="178.62" y="579.20" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">2</text>
+<text x="278.38" y="16.40" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">3</text>
+<text x="278.38" y="579.20" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">3</text>
+<text x="378.12" y="16.40" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">4</text>
+<text x="378.12" y="579.20" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">4</text>
+<text x="477.88" y="16.40" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">5</text>
+<text x="477.88" y="579.20" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">5</text>
+<text x="577.62" y="16.40" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">6</text>
+<text x="577.62" y="579.20" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">6</text>
+<text x="677.38" y="16.40" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">7</text>
+<text x="677.38" y="579.20" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">7</text>
+<text x="777.12" y="16.40" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">8</text>
+<text x="777.12" y="579.20" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">8</text>
+<line x1="29.00" y1="14.00" x2="32.00" y2="14.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="824.00" y1="14.00" x2="827.00" y2="14.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="29.00" y1="108.33" x2="32.00" y2="108.33" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="824.00" y1="108.33" x2="827.00" y2="108.33" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="29.00" y1="202.67" x2="32.00" y2="202.67" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="824.00" y1="202.67" x2="827.00" y2="202.67" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="29.00" y1="297.00" x2="32.00" y2="297.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="824.00" y1="297.00" x2="827.00" y2="297.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="29.00" y1="391.33" x2="32.00" y2="391.33" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="824.00" y1="391.33" x2="827.00" y2="391.33" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="29.00" y1="485.67" x2="32.00" y2="485.67" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="824.00" y1="485.67" x2="827.00" y2="485.67" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="29.00" y1="580.00" x2="32.00" y2="580.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="824.00" y1="580.00" x2="827.00" y2="580.00" stroke="#1f3b57" stroke-width="0.35"/>
+<text x="30.50" y="61.17" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">A</text>
+<text x="825.50" y="61.17" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">A</text>
+<text x="30.50" y="155.50" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">B</text>
+<text x="825.50" y="155.50" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">B</text>
+<text x="30.50" y="249.83" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">C</text>
+<text x="825.50" y="249.83" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">C</text>
+<text x="30.50" y="344.17" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">D</text>
+<text x="825.50" y="344.17" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">D</text>
+<text x="30.50" y="438.50" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">E</text>
+<text x="825.50" y="438.50" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">E</text>
+<text x="30.50" y="532.83" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">F</text>
+<text x="825.50" y="532.83" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">F</text>
+<rect x="651.00" y="524.00" width="176.00" height="56.00" rx="0.00" fill="none" stroke="#1f3b57" stroke-width="0.70"/>
+<line x1="651.00" y1="538.00" x2="827.00" y2="538.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="739.00" y1="538.00" x2="739.00" y2="580.00" stroke="#1f3b57" stroke-width="0.35"/>
+<line x1="651.00" y1="548.00" x2="827.00" y2="548.00" stroke="#1f3b57" stroke-width="0.30"/>
+<line x1="651.00" y1="558.00" x2="827.00" y2="558.00" stroke="#1f3b57" stroke-width="0.30"/>
+<line x1="651.00" y1="568.00" x2="827.00" y2="568.00" stroke="#1f3b57" stroke-width="0.30"/>
+<text x="654.00" y="528.00" font-size="2.10" fill="#5a6b7d" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">案例A · 2026赛题（P&amp;ID 规范化示例）</text>
+<text x="654.00" y="535.00" font-size="3.80" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">乙苯脱氢制苯乙烯 · 工艺管道及仪表流程图</text>
+<text x="654.00" y="544.00" font-size="2.20" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">图号 PID-2026-101</text>
+<text x="742.00" y="544.00" font-size="2.20" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">版次 B</text>
+<text x="654.00" y="554.00" font-size="2.10" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">设计 霍昊塬</text>
+<text x="742.00" y="554.00" font-size="2.10" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">校核 待校核</text>
+<text x="654.00" y="564.00" font-size="2.10" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">审核 待审核</text>
+<text x="742.00" y="564.00" font-size="2.10" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">批准 待审核</text>
+<text x="654.00" y="573.00" font-size="2.00" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">比例 不按比例（示意）    单位 mm</text>
+<text x="742.00" y="573.00" font-size="1.90" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">日期 2026-10-26  第1张/共1张</text>
+<text x="654.00" y="577.80" font-size="1.60" fill="#5a6b7d" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">参照 HG/T 20519 内容深度 / ISA-5.1 符号；原文未取得，条款级合规待核对</text>
+<rect x="651.00" y="496.00" width="176.00" height="28.00" rx="0.00" fill="none" stroke="#1f3b57" stroke-width="0.50"/>
+<line x1="651.00" y1="504.00" x2="827.00" y2="504.00" stroke="#1f3b57" stroke-width="0.30"/>
+<text x="653.00" y="501.50" font-size="1.90" fill="#5a6b7d" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">版次</text>
+<text x="673.00" y="501.50" font-size="1.90" fill="#5a6b7d" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">日期</text>
+<text x="709.00" y="501.50" font-size="1.90" fill="#5a6b7d" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">修改说明</text>
+<text x="653.00" y="510.50" font-size="2.10" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">B</text>
+<text x="673.00" y="510.50" font-size="1.90" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">2026-10-26</text>
+<text x="709.00" y="510.50" font-size="1.90" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">规范化升版：符号/管线标注/标题栏</text>
+<text x="610.00" y="420.00" font-size="3.00" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">图例</text>
+<line x1="611.00" y1="430.00" x2="625.00" y2="430.00" stroke="#1f3b57" stroke-width="0.55"/>
+<text x="630.00" y="431.00" font-size="2.10" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">工艺管线</text>
+<line x1="714.00" y1="430.00" x2="728.00" y2="430.00" stroke="#2e7d32" stroke-width="0.30" stroke-dasharray="3,2"/>
+<text x="733.00" y="431.00" font-size="2.10" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">仪表信号</text>
+<line x1="611.00" y1="440.50" x2="625.00" y2="440.50" stroke="#c62828" stroke-width="0.35" stroke-dasharray="5,1.5,1,1.5"/>
+<text x="630.00" y="441.50" font-size="2.10" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">联锁</text>
+<circle cx="721.00" cy="440.50" r="3.80" fill="#ffffff" stroke="#37506b" stroke-width="0.40"/>
+<text x="733.00" y="441.50" font-size="2.10" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">现场仪表</text>
+<circle cx="618.00" cy="451.00" r="3.80" fill="#ffffff" stroke="#37506b" stroke-width="0.40"/>
+<line x1="614.20" y1="451.00" x2="621.80" y2="451.00" stroke="#37506b" stroke-width="0.25"/>
+<text x="630.00" y="452.00" font-size="2.10" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">盘装仪表</text>
+<polygon points="716.00,448.00 721.00,451.00 716.00,454.00" fill="#eef4fb" stroke="#37506b" stroke-width="0.40"/>
+<polygon points="726.00,448.00 721.00,451.00 726.00,454.00" fill="#eef4fb" stroke="#37506b" stroke-width="0.40"/>
+<line x1="721.00" y1="447.00" x2="721.00" y2="444.00" stroke="#37506b" stroke-width="0.35"/>
+<ellipse cx="721.00" cy="442.80" rx="2.60" ry="1.10" fill="#ffffff" stroke="#37506b" stroke-width="0.30"/>
+<text x="733.00" y="452.00" font-size="2.10" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">控制阀</text>
+<polygon points="613.00,458.50 618.00,461.50 613.00,464.50" fill="#eef4fb" stroke="#37506b" stroke-width="0.40"/>
+<polygon points="623.00,458.50 618.00,461.50 623.00,464.50" fill="#eef4fb" stroke="#37506b" stroke-width="0.40"/>
+<text x="630.00" y="462.50" font-size="2.10" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">手动阀</text>
+<polygon points="716.00,458.50 721.00,461.50 716.00,464.50" fill="#eef4fb" stroke="#37506b" stroke-width="0.40"/>
+<polygon points="726.00,458.50 721.00,461.50 726.00,464.50" fill="#eef4fb" stroke="#37506b" stroke-width="0.40"/>
+<polygon points="723.50,461.50 718.50,459.00 718.50,464.00" fill="#37506b" stroke="#37506b" stroke-width="0.20"/>
+<text x="733.00" y="462.50" font-size="2.10" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">止回阀</text>
+<polygon points="613.00,469.00 618.00,472.00 613.00,475.00" fill="#eef4fb" stroke="#37506b" stroke-width="0.40"/>
+<polygon points="623.00,469.00 618.00,472.00 623.00,475.00" fill="#eef4fb" stroke="#37506b" stroke-width="0.40"/>
+<line x1="618.00" y1="469.00" x2="618.00" y2="464.00" stroke="#37506b" stroke-width="0.40"/>
+<line x1="616.00" y1="464.00" x2="620.00" y2="464.00" stroke="#37506b" stroke-width="0.45"/>
+<line x1="623.00" y1="475.00" x2="626.00" y2="478.00" stroke="#37506b" stroke-width="0.40"/>
+<text x="630.00" y="473.00" font-size="2.10" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">安全阀</text>
+<polygon points="716.00,469.00 721.00,472.00 716.00,475.00" fill="#eef4fb" stroke="#37506b" stroke-width="0.40"/>
+<polygon points="726.00,469.00 721.00,472.00 726.00,475.00" fill="#eef4fb" stroke="#37506b" stroke-width="0.40"/>
+<ellipse cx="721.00" cy="472.00" rx="4.00" ry="1.20" fill="none" stroke="#37506b" stroke-width="0.30"/>
+<line x1="717.00" y1="472.00" x2="725.00" y2="472.00" stroke="#37506b" stroke-width="0.30"/>
+<text x="733.00" y="473.00" font-size="2.10" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">爆破片</text>
+<polygon points="613.00,479.50 618.00,482.50 613.00,485.50" fill="#eef4fb" stroke="#37506b" stroke-width="0.40"/>
+<polygon points="623.00,479.50 618.00,482.50 623.00,485.50" fill="#eef4fb" stroke="#37506b" stroke-width="0.40"/>
+<circle cx="618.00" cy="482.50" r="4.00" fill="none" stroke="#37506b" stroke-width="0.35"/>
+<circle cx="625.00" cy="482.50" r="4.00" fill="none" stroke="#37506b" stroke-width="0.35"/>
+<text x="630.00" y="483.50" font-size="2.10" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">盲板</text>
+<rect x="35.00" y="160.00" width="565.00" height="405.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.25"/>
+<text x="37.00" y="156.00" font-size="2.80" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">工艺管道及仪表流程图（P&amp;ID）　参照 HG/T 20519 内容深度 / ISA-5.1 符号　不按比例</text>
+<rect x="49.00" y="293.87" width="24.00" height="20.00" rx="0.00" fill="#eef4fb" stroke="#37506b" stroke-width="0.55"/>
+<polygon points="49.00,293.87 49.30,292.98 50.19,292.14 51.62,291.38 53.52,290.74 55.79,290.27 58.33,289.97 61.00,289.87 63.67,289.97 66.21,290.27 68.48,290.74 70.38,291.38 71.81,292.14 72.70,292.98 73.00,293.87" fill="#eef4fb" stroke="#37506b" stroke-width="0.55"/>
+<ellipse cx="61.00" cy="313.87" rx="12.00" ry="2.50" fill="#eef4fb" stroke="#37506b" stroke-width="0.45"/>
+<line x1="61.00" y1="289.87" x2="61.00" y2="285.87" stroke="#37506b" stroke-width="0.40"/>
+<line x1="57.80" y1="285.87" x2="64.20" y2="285.87" stroke="#37506b" stroke-width="0.40"/>
+<line x1="73.00" y1="306.87" x2="78.00" y2="306.87" stroke="#37506b" stroke-width="0.40"/>
+<line x1="78.00" y1="303.67" x2="78.00" y2="310.07" stroke="#37506b" stroke-width="0.40"/>
+<line x1="58.00" y1="313.87" x2="58.00" y2="317.87" stroke="#37506b" stroke-width="0.40"/>
+<line x1="61.20" y1="317.87" x2="54.80" y2="317.87" stroke="#37506b" stroke-width="0.40"/>
+<text x="61.00" y="285.87" font-size="2.80" fill="#1f3b57" text-anchor="middle" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">TK-101</text>
+<text x="61.00" y="289.27" font-size="2.30" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">乙苯原料罐</text>
+<circle cx="129.40" cy="303.87" r="7.00" fill="#eef4fb" stroke="#37506b" stroke-width="0.55"/>
+<polygon points="125.40,299.37 133.40,303.87 125.40,308.37" fill="#eef4fb" stroke="#37506b" stroke-width="0.40"/>
+<rect x="137.40" y="299.37" width="8.00" height="9.00" rx="0.00" fill="#eef4fb" stroke="#37506b" stroke-width="0.40"/>
+<line x1="117.40" y1="303.87" x2="122.40" y2="303.87" stroke="#37506b" stroke-width="0.45"/>
+<line x1="129.40" y1="296.87" x2="129.40" y2="291.87" stroke="#37506b" stroke-width="0.45"/>
+<line x1="120.40" y1="312.87" x2="146.40" y2="312.87" stroke="#37506b" stroke-width="0.40"/>
+<text x="129.40" y="288.87" font-size="2.80" fill="#1f3b57" text-anchor="middle" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">P-101</text>
+<text x="129.40" y="292.27" font-size="2.30" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">进料泵</text>
+<rect x="185.69" y="296.37" width="34.00" height="15.00" rx="0.00" fill="#eef4fb" stroke="#37506b" stroke-width="0.55"/>
+<polygon points="185.69,311.37 184.91,311.18 184.17,310.63 183.50,309.74 182.95,308.55 182.53,307.13 182.27,305.54 182.19,303.87 182.27,302.20 182.53,300.62 182.95,299.20 183.50,298.01 184.17,297.11 184.91,296.56 185.69,296.37" fill="#eef4fb" stroke="#37506b" stroke-width="0.50"/>
+<polygon points="219.69,296.37 220.46,296.56 221.20,297.11 221.87,298.01 222.42,299.20 222.84,300.62 223.10,302.20 223.19,303.87 223.10,305.54 222.84,307.13 222.42,308.55 221.87,309.74 221.20,310.63 220.46,311.18 219.69,311.37" fill="#eef4fb" stroke="#37506b" stroke-width="0.50"/>
+<line x1="189.19" y1="300.37" x2="216.19" y2="300.37" stroke="#37506b" stroke-width="0.22"/>
+<line x1="189.19" y1="303.87" x2="216.19" y2="303.87" stroke="#37506b" stroke-width="0.22"/>
+<line x1="189.19" y1="307.37" x2="216.19" y2="307.37" stroke="#37506b" stroke-width="0.22"/>
+<line x1="194.69" y1="296.37" x2="194.69" y2="291.37" stroke="#37506b" stroke-width="0.40"/>
+<line x1="191.49" y1="291.37" x2="197.89" y2="291.37" stroke="#37506b" stroke-width="0.40"/>
+<line x1="210.69" y1="296.37" x2="210.69" y2="291.37" stroke="#37506b" stroke-width="0.40"/>
+<line x1="207.49" y1="291.37" x2="213.89" y2="291.37" stroke="#37506b" stroke-width="0.40"/>
+<line x1="194.69" y1="311.37" x2="194.69" y2="316.37" stroke="#37506b" stroke-width="0.40"/>
+<line x1="197.89" y1="316.37" x2="191.49" y2="316.37" stroke="#37506b" stroke-width="0.40"/>
+<line x1="210.69" y1="311.37" x2="210.69" y2="316.37" stroke="#37506b" stroke-width="0.40"/>
+<line x1="213.89" y1="316.37" x2="207.49" y2="316.37" stroke="#37506b" stroke-width="0.40"/>
+<text x="202.69" y="289.37" font-size="2.80" fill="#1f3b57" text-anchor="middle" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">E-101</text>
+<text x="202.69" y="292.77" font-size="2.30" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">原料预热器</text>
+<rect x="277.63" y="286.87" width="26.00" height="34.00" rx="0.00" fill="#eef4fb" stroke="#37506b" stroke-width="0.55"/>
+<polygon points="277.63,286.87 277.95,285.43 278.92,284.05 280.46,282.82 282.52,281.79 284.99,281.02 287.74,280.53 290.63,280.37 293.52,280.53 296.27,281.02 298.73,281.79 300.79,282.82 302.34,284.05 303.30,285.43 303.63,286.87" fill="#eef4fb" stroke="#37506b" stroke-width="0.55"/>
+<polygon points="303.63,320.87 303.30,322.32 302.34,323.69 300.79,324.92 298.73,325.95 296.27,326.73 293.52,327.21 290.63,327.37 287.74,327.21 284.99,326.73 282.52,325.95 280.46,324.92 278.92,323.69 277.95,322.32 277.63,320.87" fill="#eef4fb" stroke="#37506b" stroke-width="0.55"/>
+<rect x="285.63" y="270.37" width="10.00" height="6.00" rx="0.00" fill="#eef4fb" stroke="#37506b" stroke-width="0.40"/>
+<line x1="290.63" y1="280.37" x2="290.63" y2="298.87" stroke="#37506b" stroke-width="0.35"/>
+<line x1="286.63" y1="298.87" x2="294.63" y2="298.87" stroke="#37506b" stroke-width="0.50"/>
+<line x1="288.63" y1="298.87" x2="288.63" y2="301.87" stroke="#37506b" stroke-width="0.35"/>
+<line x1="292.63" y1="298.87" x2="292.63" y2="301.87" stroke="#37506b" stroke-width="0.35"/>
+<rect x="282.63" y="327.37" width="16.00" height="5.00" rx="0.00" fill="#d9e6f2" stroke="#37506b" stroke-width="0.35"/>
+<line x1="287.63" y1="280.37" x2="287.63" y2="275.37" stroke="#37506b" stroke-width="0.40"/>
+<line x1="284.43" y1="275.37" x2="290.83" y2="275.37" stroke="#37506b" stroke-width="0.40"/>
+<line x1="303.63" y1="305.87" x2="308.63" y2="305.87" stroke="#37506b" stroke-width="0.40"/>
+<line x1="308.63" y1="302.67" x2="308.63" y2="309.07" stroke="#37506b" stroke-width="0.40"/>
+<line x1="295.63" y1="327.37" x2="295.63" y2="332.37" stroke="#37506b" stroke-width="0.40"/>
+<line x1="298.83" y1="332.37" x2="292.43" y2="332.37" stroke="#37506b" stroke-width="0.40"/>
+<text x="290.63" y="274.87" font-size="2.80" fill="#1f3b57" text-anchor="middle" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">R-101</text>
+<text x="290.63" y="278.27" font-size="2.30" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">脱氢反应器</text>
+<rect x="371.34" y="296.37" width="34.00" height="15.00" rx="0.00" fill="#eef4fb" stroke="#37506b" stroke-width="0.55"/>
+<polygon points="371.34,311.37 370.56,311.18 369.82,310.63 369.16,309.74 368.61,308.55 368.19,307.13 367.93,305.54 367.84,303.87 367.93,302.20 368.19,300.62 368.61,299.20 369.16,298.01 369.82,297.11 370.56,296.56 371.34,296.37" fill="#eef4fb" stroke="#37506b" stroke-width="0.50"/>
+<polygon points="405.34,296.37 406.12,296.56 406.86,297.11 407.53,298.01 408.08,299.20 408.50,300.62 408.76,302.20 408.84,303.87 408.76,305.54 408.50,307.13 408.08,308.55 407.53,309.74 406.86,310.63 406.12,311.18 405.34,311.37" fill="#eef4fb" stroke="#37506b" stroke-width="0.50"/>
+<line x1="374.84" y1="300.37" x2="401.84" y2="300.37" stroke="#37506b" stroke-width="0.22"/>
+<line x1="374.84" y1="303.87" x2="401.84" y2="303.87" stroke="#37506b" stroke-width="0.22"/>
+<line x1="374.84" y1="307.37" x2="401.84" y2="307.37" stroke="#37506b" stroke-width="0.22"/>
+<line x1="380.34" y1="296.37" x2="380.34" y2="291.37" stroke="#37506b" stroke-width="0.40"/>
+<line x1="377.14" y1="291.37" x2="383.54" y2="291.37" stroke="#37506b" stroke-width="0.40"/>
+<line x1="396.34" y1="296.37" x2="396.34" y2="291.37" stroke="#37506b" stroke-width="0.40"/>
+<line x1="393.14" y1="291.37" x2="399.54" y2="291.37" stroke="#37506b" stroke-width="0.40"/>
+<line x1="380.34" y1="311.37" x2="380.34" y2="316.37" stroke="#37506b" stroke-width="0.40"/>
+<line x1="383.54" y1="316.37" x2="377.14" y2="316.37" stroke="#37506b" stroke-width="0.40"/>
+<line x1="396.34" y1="311.37" x2="396.34" y2="316.37" stroke="#37506b" stroke-width="0.40"/>
+<line x1="399.54" y1="316.37" x2="393.14" y2="316.37" stroke="#37506b" stroke-width="0.40"/>
+<text x="388.34" y="289.37" font-size="2.80" fill="#1f3b57" text-anchor="middle" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">E-102</text>
+<text x="388.34" y="292.77" font-size="2.30" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">产物冷却器</text>
+<rect x="464.29" y="293.87" width="24.00" height="20.00" rx="0.00" fill="#eef4fb" stroke="#37506b" stroke-width="0.55"/>
+<polygon points="464.29,293.87 464.59,292.98 465.47,292.14 466.90,291.38 468.80,290.74 471.08,290.27 473.62,289.97 476.29,289.87 478.96,289.97 481.49,290.27 483.77,290.74 485.67,291.38 487.10,292.14 487.98,292.98 488.29,293.87" fill="#eef4fb" stroke="#37506b" stroke-width="0.55"/>
+<ellipse cx="476.29" cy="313.87" rx="12.00" ry="2.50" fill="#eef4fb" stroke="#37506b" stroke-width="0.45"/>
+<line x1="476.29" y1="289.87" x2="476.29" y2="285.87" stroke="#37506b" stroke-width="0.40"/>
+<line x1="473.09" y1="285.87" x2="479.49" y2="285.87" stroke="#37506b" stroke-width="0.40"/>
+<line x1="488.29" y1="306.87" x2="493.29" y2="306.87" stroke="#37506b" stroke-width="0.40"/>
+<line x1="493.29" y1="303.67" x2="493.29" y2="310.07" stroke="#37506b" stroke-width="0.40"/>
+<line x1="473.29" y1="313.87" x2="473.29" y2="317.87" stroke="#37506b" stroke-width="0.40"/>
+<line x1="476.49" y1="317.87" x2="470.09" y2="317.87" stroke="#37506b" stroke-width="0.40"/>
+<text x="476.29" y="285.87" font-size="2.80" fill="#1f3b57" text-anchor="middle" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">V-101</text>
+<text x="476.29" y="289.27" font-size="2.30" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">冷凝分相器</text>
+<rect x="565.00" y="281.87" width="18.00" height="44.00" rx="0.00" fill="#eef4fb" stroke="#37506b" stroke-width="0.55"/>
+<polygon points="565.00,281.87 565.23,280.87 565.89,279.92 566.96,279.07 568.39,278.35 570.10,277.82 572.00,277.48 574.00,277.37 576.00,277.48 577.90,277.82 579.61,278.35 581.04,279.07 582.11,279.92 582.77,280.87 583.00,281.87" fill="#eef4fb" stroke="#37506b" stroke-width="0.55"/>
+<polygon points="583.00,325.87 582.77,326.87 582.11,327.82 581.04,328.68 579.61,329.39 577.90,329.93 576.00,330.26 574.00,330.37 572.00,330.26 570.10,329.93 568.39,329.39 566.96,328.68 565.89,327.82 565.23,326.87 565.00,325.87" fill="#eef4fb" stroke="#37506b" stroke-width="0.55"/>
+<line x1="566.50" y1="290.32" x2="581.50" y2="290.32" stroke="#37506b" stroke-width="0.22"/>
+<line x1="566.50" y1="294.27" x2="581.50" y2="294.27" stroke="#37506b" stroke-width="0.22"/>
+<line x1="566.50" y1="298.22" x2="581.50" y2="298.22" stroke="#37506b" stroke-width="0.22"/>
+<line x1="566.50" y1="302.17" x2="581.50" y2="302.17" stroke="#37506b" stroke-width="0.22"/>
+<line x1="566.50" y1="306.12" x2="581.50" y2="306.12" stroke="#37506b" stroke-width="0.22"/>
+<line x1="566.50" y1="310.07" x2="581.50" y2="310.07" stroke="#37506b" stroke-width="0.22"/>
+<line x1="566.50" y1="314.02" x2="581.50" y2="314.02" stroke="#37506b" stroke-width="0.22"/>
+<line x1="566.50" y1="317.97" x2="581.50" y2="317.97" stroke="#37506b" stroke-width="0.22"/>
+<line x1="566.50" y1="321.92" x2="581.50" y2="321.92" stroke="#37506b" stroke-width="0.22"/>
+<rect x="567.50" y="330.37" width="13.00" height="5.00" rx="0.00" fill="#d9e6f2" stroke="#37506b" stroke-width="0.35"/>
+<line x1="574.00" y1="277.37" x2="574.00" y2="272.37" stroke="#37506b" stroke-width="0.40"/>
+<line x1="570.80" y1="272.37" x2="577.20" y2="272.37" stroke="#37506b" stroke-width="0.40"/>
+<line x1="583.00" y1="307.87" x2="588.00" y2="307.87" stroke="#37506b" stroke-width="0.40"/>
+<line x1="588.00" y1="304.67" x2="588.00" y2="311.07" stroke="#37506b" stroke-width="0.40"/>
+<line x1="574.00" y1="330.37" x2="574.00" y2="335.37" stroke="#37506b" stroke-width="0.40"/>
+<line x1="577.20" y1="335.37" x2="570.80" y2="335.37" stroke="#37506b" stroke-width="0.40"/>
+<line x1="565.00" y1="293.87" x2="560.00" y2="293.87" stroke="#37506b" stroke-width="0.40"/>
+<line x1="560.00" y1="297.07" x2="560.00" y2="290.67" stroke="#37506b" stroke-width="0.40"/>
+<text x="574.00" y="271.87" font-size="2.80" fill="#1f3b57" text-anchor="middle" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">T-101</text>
+<text x="574.00" y="275.27" font-size="2.30" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">乙苯/苯乙烯塔</text>
+<rect x="562.00" y="499.07" width="24.00" height="20.00" rx="0.00" fill="#eef4fb" stroke="#37506b" stroke-width="0.55"/>
+<polygon points="562.00,499.07 562.30,498.18 563.19,497.34 564.62,496.58 566.52,495.94 568.79,495.47 571.33,495.17 574.00,495.07 576.67,495.17 579.21,495.47 581.48,495.94 583.38,496.58 584.81,497.34 585.70,498.18 586.00,499.07" fill="#eef4fb" stroke="#37506b" stroke-width="0.55"/>
+<ellipse cx="574.00" cy="519.07" rx="12.00" ry="2.50" fill="#eef4fb" stroke="#37506b" stroke-width="0.45"/>
+<line x1="574.00" y1="495.07" x2="574.00" y2="491.07" stroke="#37506b" stroke-width="0.40"/>
+<line x1="570.80" y1="491.07" x2="577.20" y2="491.07" stroke="#37506b" stroke-width="0.40"/>
+<line x1="586.00" y1="512.07" x2="591.00" y2="512.07" stroke="#37506b" stroke-width="0.40"/>
+<line x1="591.00" y1="508.87" x2="591.00" y2="515.27" stroke="#37506b" stroke-width="0.40"/>
+<line x1="571.00" y1="519.07" x2="571.00" y2="523.07" stroke="#37506b" stroke-width="0.40"/>
+<line x1="574.20" y1="523.07" x2="567.80" y2="523.07" stroke="#37506b" stroke-width="0.40"/>
+<text x="574.00" y="491.07" font-size="2.80" fill="#1f3b57" text-anchor="middle" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">TK-102</text>
+<text x="574.00" y="494.47" font-size="2.30" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">苯乙烯产品罐</text>
+<rect x="376.34" y="499.07" width="24.00" height="20.00" rx="0.00" fill="#eef4fb" stroke="#37506b" stroke-width="0.55"/>
+<polygon points="376.34,499.07 376.64,498.18 377.53,497.34 378.96,496.58 380.86,495.94 383.14,495.47 385.67,495.17 388.34,495.07 391.01,495.17 393.55,495.47 395.82,495.94 397.72,496.58 399.15,497.34 400.04,498.18 400.34,499.07" fill="#eef4fb" stroke="#37506b" stroke-width="0.55"/>
+<ellipse cx="388.34" cy="519.07" rx="12.00" ry="2.50" fill="#eef4fb" stroke="#37506b" stroke-width="0.45"/>
+<line x1="388.34" y1="495.07" x2="388.34" y2="491.07" stroke="#37506b" stroke-width="0.40"/>
+<line x1="385.14" y1="491.07" x2="391.54" y2="491.07" stroke="#37506b" stroke-width="0.40"/>
+<line x1="400.34" y1="512.07" x2="405.34" y2="512.07" stroke="#37506b" stroke-width="0.40"/>
+<line x1="405.34" y1="508.87" x2="405.34" y2="515.27" stroke="#37506b" stroke-width="0.40"/>
+<line x1="385.34" y1="519.07" x2="385.34" y2="523.07" stroke="#37506b" stroke-width="0.40"/>
+<line x1="388.54" y1="523.07" x2="382.14" y2="523.07" stroke="#37506b" stroke-width="0.40"/>
+<text x="388.34" y="491.07" font-size="2.80" fill="#1f3b57" text-anchor="middle" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">TK-103</text>
+<text x="388.34" y="494.47" font-size="2.30" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">氢气/尾气</text>
+<rect x="444.74" y="499.07" width="24.00" height="20.00" rx="0.00" fill="#eef4fb" stroke="#37506b" stroke-width="0.55"/>
+<polygon points="444.74,499.07 445.04,498.18 445.93,497.34 447.36,496.58 449.26,495.94 451.54,495.47 454.07,495.17 456.74,495.07 459.41,495.17 461.95,495.47 464.22,495.94 466.12,496.58 467.55,497.34 468.44,498.18 468.74,499.07" fill="#eef4fb" stroke="#37506b" stroke-width="0.55"/>
+<ellipse cx="456.74" cy="519.07" rx="12.00" ry="2.50" fill="#eef4fb" stroke="#37506b" stroke-width="0.45"/>
+<line x1="456.74" y1="495.07" x2="456.74" y2="491.07" stroke="#37506b" stroke-width="0.40"/>
+<line x1="453.54" y1="491.07" x2="459.94" y2="491.07" stroke="#37506b" stroke-width="0.40"/>
+<line x1="468.74" y1="512.07" x2="473.74" y2="512.07" stroke="#37506b" stroke-width="0.40"/>
+<line x1="473.74" y1="508.87" x2="473.74" y2="515.27" stroke="#37506b" stroke-width="0.40"/>
+<line x1="453.74" y1="519.07" x2="453.74" y2="523.07" stroke="#37506b" stroke-width="0.40"/>
+<line x1="456.94" y1="523.07" x2="450.54" y2="523.07" stroke="#37506b" stroke-width="0.40"/>
+<text x="456.74" y="491.07" font-size="2.80" fill="#1f3b57" text-anchor="middle" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">TK-104</text>
+<text x="456.74" y="494.47" font-size="2.30" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">工艺水</text>
+<rect x="49.00" y="205.93" width="24.00" height="20.00" rx="0.00" fill="#eef4fb" stroke="#37506b" stroke-width="0.55"/>
+<polygon points="49.00,205.93 49.30,205.04 50.19,204.19 51.62,203.43 53.52,202.80 55.79,202.32 58.33,202.03 61.00,201.93 63.67,202.03 66.21,202.32 68.48,202.80 70.38,203.43 71.81,204.19 72.70,205.04 73.00,205.93" fill="#eef4fb" stroke="#37506b" stroke-width="0.55"/>
+<ellipse cx="61.00" cy="225.93" rx="12.00" ry="2.50" fill="#eef4fb" stroke="#37506b" stroke-width="0.45"/>
+<line x1="61.00" y1="201.93" x2="61.00" y2="197.93" stroke="#37506b" stroke-width="0.40"/>
+<line x1="57.80" y1="197.93" x2="64.20" y2="197.93" stroke="#37506b" stroke-width="0.40"/>
+<line x1="73.00" y1="218.93" x2="78.00" y2="218.93" stroke="#37506b" stroke-width="0.40"/>
+<line x1="78.00" y1="215.73" x2="78.00" y2="222.13" stroke="#37506b" stroke-width="0.40"/>
+<line x1="58.00" y1="225.93" x2="58.00" y2="229.93" stroke="#37506b" stroke-width="0.40"/>
+<line x1="61.20" y1="229.93" x2="54.80" y2="229.93" stroke="#37506b" stroke-width="0.40"/>
+<text x="61.00" y="197.93" font-size="2.80" fill="#1f3b57" text-anchor="middle" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">H-101</text>
+<text x="61.00" y="201.33" font-size="2.30" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">中压蒸汽</text>
+<circle cx="310.17" cy="430.90" r="7.00" fill="#ffffff" stroke="#37506b" stroke-width="0.50"/>
+<text x="310.17" y="430.10" font-size="2.80" fill="#1f3b57" text-anchor="middle" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">TI</text>
+<text x="310.17" y="434.30" font-size="2.40" fill="#1f3b57" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">101</text>
+<text x="310.17" y="441.90" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">TI 温度</text>
+<text x="310.17" y="444.70" font-size="1.90" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">0~800 ℃</text>
+<circle cx="261.31" cy="430.90" r="7.00" fill="#ffffff" stroke="#37506b" stroke-width="0.50"/>
+<line x1="254.31" y1="430.90" x2="268.31" y2="430.90" stroke="#37506b" stroke-width="0.30"/>
+<text x="261.31" y="430.10" font-size="2.80" fill="#1f3b57" text-anchor="middle" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">TIC</text>
+<text x="261.31" y="434.30" font-size="2.40" fill="#1f3b57" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">101</text>
+<text x="261.31" y="441.90" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">TIC 温控</text>
+<text x="261.31" y="444.70" font-size="1.90" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">0~800 ℃</text>
+<text x="269.81" y="428.90" font-size="2.00" fill="#c62828" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">I-1 高温联锁</text>
+<circle cx="129.40" cy="430.90" r="7.00" fill="#ffffff" stroke="#37506b" stroke-width="0.50"/>
+<line x1="122.40" y1="430.90" x2="136.40" y2="430.90" stroke="#37506b" stroke-width="0.30"/>
+<text x="129.40" y="430.10" font-size="2.80" fill="#1f3b57" text-anchor="middle" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">FIC</text>
+<text x="129.40" y="434.30" font-size="2.40" fill="#1f3b57" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">101</text>
+<text x="129.40" y="441.90" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">FIC 流量</text>
+<text x="129.40" y="444.70" font-size="1.90" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">0~50 t/h</text>
+<circle cx="378.57" cy="430.90" r="7.00" fill="#ffffff" stroke="#37506b" stroke-width="0.50"/>
+<line x1="371.57" y1="430.90" x2="385.57" y2="430.90" stroke="#37506b" stroke-width="0.30"/>
+<text x="378.57" y="430.10" font-size="2.80" fill="#1f3b57" text-anchor="middle" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PIC</text>
+<text x="378.57" y="434.30" font-size="2.40" fill="#1f3b57" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">101</text>
+<text x="378.57" y="441.90" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PIC 压力</text>
+<text x="378.57" y="444.70" font-size="1.90" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">0~1.0 MPa</text>
+<text x="387.07" y="428.90" font-size="2.00" fill="#c62828" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">I-2 超压联锁</text>
+<circle cx="534.91" cy="430.90" r="7.00" fill="#ffffff" stroke="#37506b" stroke-width="0.50"/>
+<line x1="527.91" y1="430.90" x2="541.91" y2="430.90" stroke="#37506b" stroke-width="0.30"/>
+<text x="534.91" y="430.10" font-size="2.80" fill="#1f3b57" text-anchor="middle" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">LIC</text>
+<text x="534.91" y="434.30" font-size="2.40" fill="#1f3b57" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">101</text>
+<text x="534.91" y="441.90" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">LIC 液位</text>
+<text x="534.91" y="444.70" font-size="1.90" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">0~100%</text>
+<polygon points="194.69,211.43 202.69,215.93 194.69,220.43" fill="#eef4fb" stroke="#37506b" stroke-width="0.45"/>
+<polygon points="210.69,211.43 202.69,215.93 210.69,220.43" fill="#eef4fb" stroke="#37506b" stroke-width="0.45"/>
+<line x1="202.69" y1="211.43" x2="202.69" y2="207.43" stroke="#37506b" stroke-width="0.40"/>
+<ellipse cx="202.69" cy="205.93" rx="4.20" ry="1.80" fill="#ffffff" stroke="#37506b" stroke-width="0.40"/>
+<text x="202.69" y="201.93" font-size="2.80" fill="#1f3b57" text-anchor="middle" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">FV-101</text>
+<text x="202.69" y="221.93" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">FV 蒸汽</text>
+<polygon points="360.80,211.43 368.80,215.93 360.80,220.43" fill="#eef4fb" stroke="#37506b" stroke-width="0.45"/>
+<polygon points="376.80,211.43 368.80,215.93 376.80,220.43" fill="#eef4fb" stroke="#37506b" stroke-width="0.45"/>
+<line x1="368.80" y1="211.43" x2="368.80" y2="207.43" stroke="#37506b" stroke-width="0.40"/>
+<ellipse cx="368.80" cy="205.93" rx="4.20" ry="1.80" fill="#ffffff" stroke="#37506b" stroke-width="0.40"/>
+<text x="368.80" y="201.93" font-size="2.80" fill="#1f3b57" text-anchor="middle" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PV-101</text>
+<text x="368.80" y="221.93" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PV 放空</text>
+<polygon points="468.29,211.43 476.29,215.93 468.29,220.43" fill="#eef4fb" stroke="#37506b" stroke-width="0.45"/>
+<polygon points="484.29,211.43 476.29,215.93 484.29,220.43" fill="#eef4fb" stroke="#37506b" stroke-width="0.45"/>
+<line x1="476.29" y1="211.43" x2="476.29" y2="207.43" stroke="#37506b" stroke-width="0.40"/>
+<ellipse cx="476.29" cy="205.93" rx="4.20" ry="1.80" fill="#ffffff" stroke="#37506b" stroke-width="0.40"/>
+<text x="476.29" y="201.93" font-size="2.80" fill="#1f3b57" text-anchor="middle" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">LV-101</text>
+<text x="476.29" y="221.93" font-size="2.20" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">LV 回流</text>
+<line x1="73.00" y1="303.87" x2="116.40" y2="303.87" stroke="#1f3b57" stroke-width="0.55"/>
+<line x1="116.40" y1="303.87" x2="116.40" y2="303.87" stroke="#1f3b57" stroke-width="0.55"/>
+<polygon points="114.15,304.96 114.15,302.78 116.40,303.87" fill="#1f3b57" stroke="#1f3b57" stroke-width="0.20"/>
+<rect x="77.30" y="299.37" width="34.80" height="3.20" rx="0.00" fill="#ffffff" stroke="none" stroke-width="0.00"/>
+<text x="94.70" y="301.87" font-size="2.00" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-101-100-A1A  DN100  A1A  —</text>
+<polygon points="91.87,300.87 96.87,303.87 91.87,306.87" fill="#eef4fb" stroke="#37506b" stroke-width="0.40"/>
+<polygon points="101.87,300.87 96.87,303.87 101.87,306.87" fill="#eef4fb" stroke="#37506b" stroke-width="0.40"/>
+<text x="96.87" y="297.37" font-size="2.00" fill="#1f3b57" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">HV-101</text>
+<line x1="142.40" y1="303.87" x2="182.19" y2="303.87" stroke="#1f3b57" stroke-width="0.55"/>
+<line x1="182.19" y1="303.87" x2="182.19" y2="303.87" stroke="#1f3b57" stroke-width="0.55"/>
+<polygon points="179.93,304.96 179.93,302.78 182.19,303.87" fill="#1f3b57" stroke="#1f3b57" stroke-width="0.20"/>
+<rect x="144.89" y="299.37" width="34.80" height="3.20" rx="0.00" fill="#ffffff" stroke="none" stroke-width="0.00"/>
+<text x="162.29" y="301.87" font-size="2.00" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-102-100-A1A  DN100  A1A  —</text>
+<polygon points="151.32,300.87 156.32,303.87 151.32,306.87" fill="#eef4fb" stroke="#37506b" stroke-width="0.40"/>
+<polygon points="161.32,300.87 156.32,303.87 161.32,306.87" fill="#eef4fb" stroke="#37506b" stroke-width="0.40"/>
+<polygon points="158.82,303.87 153.82,301.37 153.82,306.37" fill="#37506b" stroke="#37506b" stroke-width="0.20"/>
+<text x="156.32" y="297.37" font-size="2.00" fill="#1f3b57" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">CV-101</text>
+<line x1="223.19" y1="303.87" x2="277.63" y2="303.87" stroke="#1f3b57" stroke-width="0.55"/>
+<line x1="277.63" y1="303.87" x2="277.63" y2="303.87" stroke="#1f3b57" stroke-width="0.55"/>
+<polygon points="275.38,304.96 275.38,302.78 277.63,303.87" fill="#1f3b57" stroke="#1f3b57" stroke-width="0.20"/>
+<rect x="234.11" y="299.37" width="32.60" height="3.20" rx="0.00" fill="#ffffff" stroke="none" stroke-width="0.00"/>
+<text x="250.41" y="301.87" font-size="2.00" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-103-80-A1A  DN80  A1A  —</text>
+<line x1="303.63" y1="303.87" x2="367.84" y2="303.87" stroke="#1f3b57" stroke-width="0.55"/>
+<line x1="367.84" y1="303.87" x2="367.84" y2="303.87" stroke="#1f3b57" stroke-width="0.55"/>
+<polygon points="365.59,304.96 365.59,302.78 367.84,303.87" fill="#1f3b57" stroke="#1f3b57" stroke-width="0.20"/>
+<rect x="319.44" y="299.37" width="32.60" height="3.20" rx="0.00" fill="#ffffff" stroke="none" stroke-width="0.00"/>
+<text x="335.74" y="301.87" font-size="2.00" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-104-80-A1A  DN80  A1A  —</text>
+<line x1="408.84" y1="303.87" x2="464.29" y2="303.87" stroke="#1f3b57" stroke-width="0.55"/>
+<line x1="464.29" y1="303.87" x2="464.29" y2="303.87" stroke="#1f3b57" stroke-width="0.55"/>
+<polygon points="462.03,304.96 462.03,302.78 464.29,303.87" fill="#1f3b57" stroke="#1f3b57" stroke-width="0.20"/>
+<rect x="419.16" y="299.37" width="34.80" height="3.20" rx="0.00" fill="#ffffff" stroke="none" stroke-width="0.00"/>
+<text x="436.56" y="301.87" font-size="2.00" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-105-100-A1A  DN100  A1A  —</text>
+<line x1="488.29" y1="303.87" x2="565.00" y2="303.87" stroke="#1f3b57" stroke-width="0.55"/>
+<line x1="565.00" y1="303.87" x2="565.00" y2="303.87" stroke="#1f3b57" stroke-width="0.55"/>
+<polygon points="562.75,304.96 562.75,302.78 565.00,303.87" fill="#1f3b57" stroke="#1f3b57" stroke-width="0.20"/>
+<rect x="510.34" y="299.37" width="32.60" height="3.20" rx="0.00" fill="#ffffff" stroke="none" stroke-width="0.00"/>
+<text x="526.64" y="301.87" font-size="2.00" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-106-80-A1A  DN80  A1A  —</text>
+<line x1="574.00" y1="330.37" x2="574.00" y2="330.37" stroke="#1f3b57" stroke-width="0.55"/>
+<line x1="574.00" y1="330.37" x2="574.00" y2="495.07" stroke="#1f3b57" stroke-width="0.55"/>
+<polygon points="572.91,492.82 575.09,492.82 574.00,495.07" fill="#1f3b57" stroke="#1f3b57" stroke-width="0.20"/>
+<rect x="557.70" y="408.22" width="32.60" height="3.20" rx="0.00" fill="#ffffff" stroke="none" stroke-width="0.00"/>
+<text x="574.00" y="410.72" font-size="2.00" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-107-50-A1A  DN50  A1A  —</text>
+<line x1="476.29" y1="317.87" x2="388.34" y2="317.87" stroke="#1f3b57" stroke-width="0.55"/>
+<line x1="388.34" y1="317.87" x2="388.34" y2="495.07" stroke="#1f3b57" stroke-width="0.55"/>
+<polygon points="387.26,492.82 389.43,492.82 388.34,495.07" fill="#1f3b57" stroke="#1f3b57" stroke-width="0.20"/>
+<rect x="372.04" y="401.97" width="32.60" height="3.20" rx="0.00" fill="#ffffff" stroke="none" stroke-width="0.00"/>
+<text x="388.34" y="404.47" font-size="2.00" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-108-50-A1A  DN50  A1A  —</text>
+<line x1="476.29" y1="317.87" x2="456.74" y2="317.87" stroke="#1f3b57" stroke-width="0.55"/>
+<line x1="456.74" y1="317.87" x2="456.74" y2="495.07" stroke="#1f3b57" stroke-width="0.55"/>
+<polygon points="455.66,492.82 457.83,492.82 456.74,495.07" fill="#1f3b57" stroke="#1f3b57" stroke-width="0.20"/>
+<rect x="440.44" y="401.97" width="32.60" height="3.20" rx="0.00" fill="#ffffff" stroke="none" stroke-width="0.00"/>
+<text x="456.74" y="404.47" font-size="2.00" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-109-50-A1A  DN50  A1A  —</text>
+<line x1="73.00" y1="215.93" x2="202.69" y2="215.93" stroke="#1f3b57" stroke-width="0.55"/>
+<line x1="202.69" y1="215.93" x2="202.69" y2="215.93" stroke="#1f3b57" stroke-width="0.55"/>
+<polygon points="200.43,217.02 200.43,214.84 202.69,215.93" fill="#1f3b57" stroke="#1f3b57" stroke-width="0.20"/>
+<rect x="117.99" y="211.43" width="39.70" height="3.20" rx="0.00" fill="#ffffff" stroke="none" stroke-width="0.00"/>
+<text x="137.84" y="213.93" font-size="2.00" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-110-50-A1A  DN50  A1A  保温 伴热</text>
+<line x1="202.69" y1="215.93" x2="290.63" y2="215.93" stroke="#1f3b57" stroke-width="0.55"/>
+<line x1="290.63" y1="215.93" x2="290.63" y2="280.37" stroke="#1f3b57" stroke-width="0.55"/>
+<polygon points="289.54,278.12 291.72,278.12 290.63,280.37" fill="#1f3b57" stroke="#1f3b57" stroke-width="0.20"/>
+<rect x="226.81" y="211.43" width="39.70" height="3.20" rx="0.00" fill="#ffffff" stroke="none" stroke-width="0.00"/>
+<text x="246.66" y="213.93" font-size="2.00" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-111-50-A1A  DN50  A1A  保温 伴热</text>
+<line x1="476.29" y1="289.87" x2="476.29" y2="289.87" stroke="#1f3b57" stroke-width="0.55"/>
+<line x1="476.29" y1="289.87" x2="476.29" y2="215.93" stroke="#1f3b57" stroke-width="0.55"/>
+<polygon points="477.37,218.18 475.20,218.18 476.29,215.93" fill="#1f3b57" stroke="#1f3b57" stroke-width="0.20"/>
+<rect x="459.99" y="248.40" width="32.60" height="3.20" rx="0.00" fill="#ffffff" stroke="none" stroke-width="0.00"/>
+<text x="476.29" y="250.90" font-size="2.00" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-112-80-A1A  DN80  A1A  —</text>
+<line x1="476.29" y1="215.93" x2="565.00" y2="215.93" stroke="#1f3b57" stroke-width="0.55"/>
+<line x1="565.00" y1="215.93" x2="565.00" y2="303.87" stroke="#1f3b57" stroke-width="0.55"/>
+<polygon points="563.91,301.62 566.09,301.62 565.00,303.87" fill="#1f3b57" stroke="#1f3b57" stroke-width="0.20"/>
+<rect x="504.34" y="211.43" width="32.60" height="3.20" rx="0.00" fill="#ffffff" stroke="none" stroke-width="0.00"/>
+<text x="520.64" y="213.93" font-size="2.00" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-113-80-A1A  DN80  A1A  —</text>
+<line x1="290.63" y1="280.37" x2="368.80" y2="280.37" stroke="#1f3b57" stroke-width="0.55"/>
+<line x1="368.80" y1="280.37" x2="368.80" y2="215.93" stroke="#1f3b57" stroke-width="0.55"/>
+<polygon points="369.89,218.18 367.71,218.18 368.80,215.93" fill="#1f3b57" stroke="#1f3b57" stroke-width="0.20"/>
+<rect x="313.41" y="275.87" width="32.60" height="3.20" rx="0.00" fill="#ffffff" stroke="none" stroke-width="0.00"/>
+<text x="329.71" y="278.37" font-size="2.00" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-114-80-A1A  DN80  A1A  —</text>
+<line x1="368.80" y1="215.93" x2="350.80" y2="215.93" stroke="#1f3b57" stroke-width="0.55"/>
+<line x1="350.80" y1="215.93" x2="350.80" y2="495.07" stroke="#1f3b57" stroke-width="0.55"/>
+<line x1="350.80" y1="495.07" x2="388.34" y2="495.07" stroke="#1f3b57" stroke-width="0.55"/>
+<polygon points="386.09,496.16 386.09,493.98 388.34,495.07" fill="#1f3b57" stroke="#1f3b57" stroke-width="0.20"/>
+<rect x="334.50" y="351.00" width="32.60" height="3.20" rx="0.00" fill="#ffffff" stroke="none" stroke-width="0.00"/>
+<text x="350.80" y="353.50" font-size="2.00" fill="#5a6b7d" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-115-80-A1A  DN80  A1A  —</text>
+<line x1="261.31" y1="430.90" x2="290.63" y2="430.90" stroke="#2e7d32" stroke-width="0.30" stroke-dasharray="3,2"/>
+<line x1="290.63" y1="430.90" x2="290.63" y2="327.37" stroke="#2e7d32" stroke-width="0.30" stroke-dasharray="3,2"/>
+<line x1="261.31" y1="430.90" x2="261.31" y2="215.93" stroke="#2e7d32" stroke-width="0.30" stroke-dasharray="3,2"/>
+<line x1="261.31" y1="215.93" x2="202.69" y2="215.93" stroke="#2e7d32" stroke-width="0.30" stroke-dasharray="3,2"/>
+<line x1="310.17" y1="430.90" x2="290.63" y2="430.90" stroke="#2e7d32" stroke-width="0.30" stroke-dasharray="3,2"/>
+<line x1="290.63" y1="430.90" x2="290.63" y2="327.37" stroke="#2e7d32" stroke-width="0.30" stroke-dasharray="3,2"/>
+<line x1="129.40" y1="430.90" x2="166.04" y2="430.90" stroke="#2e7d32" stroke-width="0.30" stroke-dasharray="3,2"/>
+<line x1="166.04" y1="430.90" x2="166.04" y2="215.93" stroke="#2e7d32" stroke-width="0.30" stroke-dasharray="3,2"/>
+<line x1="166.04" y1="215.93" x2="202.69" y2="215.93" stroke="#2e7d32" stroke-width="0.30" stroke-dasharray="3,2"/>
+<line x1="129.40" y1="430.90" x2="129.40" y2="430.90" stroke="#2e7d32" stroke-width="0.30" stroke-dasharray="3,2"/>
+<line x1="129.40" y1="430.90" x2="129.40" y2="312.87" stroke="#2e7d32" stroke-width="0.30" stroke-dasharray="3,2"/>
+<line x1="378.57" y1="430.90" x2="350.80" y2="430.90" stroke="#2e7d32" stroke-width="0.30" stroke-dasharray="3,2"/>
+<line x1="350.80" y1="430.90" x2="350.80" y2="215.93" stroke="#2e7d32" stroke-width="0.30" stroke-dasharray="3,2"/>
+<line x1="350.80" y1="215.93" x2="368.80" y2="215.93" stroke="#2e7d32" stroke-width="0.30" stroke-dasharray="3,2"/>
+<line x1="534.91" y1="430.90" x2="534.91" y2="215.93" stroke="#2e7d32" stroke-width="0.30" stroke-dasharray="3,2"/>
+<line x1="534.91" y1="215.93" x2="476.29" y2="215.93" stroke="#2e7d32" stroke-width="0.30" stroke-dasharray="3,2"/>
+<line x1="261.31" y1="430.90" x2="290.63" y2="430.90" stroke="#c62828" stroke-width="0.30" stroke-dasharray="5,1.5,1,1.5"/>
+<line x1="290.63" y1="430.90" x2="290.63" y2="327.37" stroke="#c62828" stroke-width="0.30" stroke-dasharray="5,1.5,1,1.5"/>
+<text x="275.97" y="365.89" font-size="2.00" fill="#c62828" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">I-1</text>
+<line x1="378.57" y1="430.90" x2="290.63" y2="430.90" stroke="#c62828" stroke-width="0.30" stroke-dasharray="5,1.5,1,1.5"/>
+<line x1="290.63" y1="430.90" x2="290.63" y2="327.37" stroke="#c62828" stroke-width="0.30" stroke-dasharray="5,1.5,1,1.5"/>
+<text x="334.60" y="365.89" font-size="2.00" fill="#c62828" text-anchor="middle" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">I-2</text>
+<text x="610.00" y="309.50" font-size="3.40" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">设备一览表</text>
+<rect x="610.00" y="312.00" width="217.00" height="8.00" rx="0.00" fill="#dce8f4" stroke="#37506b" stroke-width="0.40"/>
+<text x="611.20" y="317.80" font-size="2.70" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">位号</text>
+<text x="654.60" y="317.80" font-size="2.70" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">名称</text>
+<text x="713.78" y="317.80" font-size="2.70" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">规格/参数</text>
+<text x="780.85" y="317.80" font-size="2.70" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">材料</text>
+<text x="812.42" y="317.80" font-size="2.70" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">数量</text>
+<rect x="610.00" y="320.00" width="217.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="611.20" y="325.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">TK-101</text>
+<text x="654.60" y="325.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">乙苯原料罐</text>
+<text x="713.78" y="325.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">V=200 m³</text>
+<text x="780.85" y="325.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">Q345R</text>
+<text x="812.42" y="325.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">1</text>
+<rect x="610.00" y="328.00" width="217.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="611.20" y="333.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">P-101</text>
+<text x="654.60" y="333.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">进料泵</text>
+<text x="713.78" y="333.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">Q=30 m³/h</text>
+<text x="780.85" y="333.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">304</text>
+<text x="812.42" y="333.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">1</text>
+<rect x="610.00" y="336.00" width="217.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="611.20" y="341.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">E-101</text>
+<text x="654.60" y="341.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">原料预热器</text>
+<text x="713.78" y="341.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">A=120 m²</text>
+<text x="780.85" y="341.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">Q345R</text>
+<text x="812.42" y="341.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">1</text>
+<rect x="610.00" y="344.00" width="217.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="611.20" y="349.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">R-101</text>
+<text x="654.60" y="349.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">脱氢反应器</text>
+<text x="713.78" y="349.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">DN3000×12000</text>
+<text x="780.85" y="349.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">0Cr18Ni9</text>
+<text x="812.42" y="349.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">1</text>
+<rect x="610.00" y="352.00" width="217.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="611.20" y="357.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">E-102</text>
+<text x="654.60" y="357.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">产物冷却器</text>
+<text x="713.78" y="357.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">A=450 m²</text>
+<text x="780.85" y="357.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">Q345R</text>
+<text x="812.42" y="357.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">1</text>
+<rect x="610.00" y="360.00" width="217.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="611.20" y="365.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">V-101</text>
+<text x="654.60" y="365.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">冷凝分相器</text>
+<text x="713.78" y="365.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">V=60 m³</text>
+<text x="780.85" y="365.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">Q345R</text>
+<text x="812.42" y="365.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">1</text>
+<rect x="610.00" y="368.00" width="217.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="611.20" y="373.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">T-101</text>
+<text x="654.60" y="373.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">乙苯/苯乙烯塔</text>
+<text x="713.78" y="373.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">DN2400×20000</text>
+<text x="780.85" y="373.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">Q345R</text>
+<text x="812.42" y="373.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">1</text>
+<rect x="610.00" y="376.00" width="217.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="611.20" y="381.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">TK-102</text>
+<text x="654.60" y="381.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">苯乙烯产品罐</text>
+<text x="713.78" y="381.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">V=150 m³</text>
+<text x="780.85" y="381.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">Q345R</text>
+<text x="812.42" y="381.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">1</text>
+<rect x="610.00" y="384.00" width="217.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="611.20" y="389.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">TK-103</text>
+<text x="654.60" y="389.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">氢气/尾气</text>
+<text x="713.78" y="389.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">V=20 m³</text>
+<text x="780.85" y="389.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">Q345R</text>
+<text x="812.42" y="389.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">1</text>
+<rect x="610.00" y="392.00" width="217.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="611.20" y="397.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">TK-104</text>
+<text x="654.60" y="397.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">工艺水</text>
+<text x="713.78" y="397.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">V=100 m³</text>
+<text x="780.85" y="397.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">Q345R</text>
+<text x="812.42" y="397.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">1</text>
+<rect x="610.00" y="400.00" width="217.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="611.20" y="405.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">H-101</text>
+<text x="654.60" y="405.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">中压蒸汽</text>
+<text x="713.78" y="405.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">DN250</text>
+<text x="780.85" y="405.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">Q345R</text>
+<text x="812.42" y="405.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">1</text>
+<rect x="610.00" y="312.00" width="217.00" height="96.00" rx="0.00" fill="none" stroke="#37506b" stroke-width="0.40"/>
+<line x1="653.40" y1="312.00" x2="653.40" y2="408.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="712.58" y1="312.00" x2="712.58" y2="408.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="779.65" y1="312.00" x2="779.65" y2="408.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="811.22" y1="312.00" x2="811.22" y2="408.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="610.00" y1="320.00" x2="827.00" y2="320.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="610.00" y1="328.00" x2="827.00" y2="328.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="610.00" y1="336.00" x2="827.00" y2="336.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="610.00" y1="344.00" x2="827.00" y2="344.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="610.00" y1="352.00" x2="827.00" y2="352.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="610.00" y1="360.00" x2="827.00" y2="360.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="610.00" y1="368.00" x2="827.00" y2="368.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="610.00" y1="376.00" x2="827.00" y2="376.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="610.00" y1="384.00" x2="827.00" y2="384.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="610.00" y1="392.00" x2="827.00" y2="392.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="610.00" y1="400.00" x2="827.00" y2="400.00" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="610.00" y="212.50" font-size="3.40" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">仪表与阀门</text>
+<rect x="610.00" y="215.00" width="217.00" height="8.00" rx="0.00" fill="#dce8f4" stroke="#37506b" stroke-width="0.40"/>
+<text x="611.20" y="220.80" font-size="2.70" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">位号</text>
+<text x="653.83" y="220.80" font-size="2.70" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">说明</text>
+<text x="711.95" y="220.80" font-size="2.70" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">类型</text>
+<text x="750.70" y="220.80" font-size="2.70" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">量程/规格</text>
+<text x="793.33" y="220.80" font-size="2.70" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">联锁</text>
+<rect x="610.00" y="223.00" width="217.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="611.20" y="228.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">TI-101</text>
+<text x="653.83" y="228.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">TI 温度</text>
+<text x="711.95" y="228.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">热电偶</text>
+<text x="750.70" y="228.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">0~800 ℃</text>
+<text x="793.33" y="228.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">—</text>
+<rect x="610.00" y="231.00" width="217.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="611.20" y="236.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">TIC-101</text>
+<text x="653.83" y="236.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">TIC 温控</text>
+<text x="711.95" y="236.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">DCS</text>
+<text x="750.70" y="236.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">0~800 ℃</text>
+<text x="793.33" y="236.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">I-1 高温联锁</text>
+<rect x="610.00" y="239.00" width="217.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="611.20" y="244.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">FIC-101</text>
+<text x="653.83" y="244.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">FIC 流量</text>
+<text x="711.95" y="244.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">DCS</text>
+<text x="750.70" y="244.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">0~50 t/h</text>
+<text x="793.33" y="244.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">—</text>
+<rect x="610.00" y="247.00" width="217.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="611.20" y="252.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PIC-101</text>
+<text x="653.83" y="252.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PIC 压力</text>
+<text x="711.95" y="252.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">DCS</text>
+<text x="750.70" y="252.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">0~1.0 MPa</text>
+<text x="793.33" y="252.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">I-2 超压联锁</text>
+<rect x="610.00" y="255.00" width="217.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="611.20" y="260.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">LIC-101</text>
+<text x="653.83" y="260.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">LIC 液位</text>
+<text x="711.95" y="260.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">DCS</text>
+<text x="750.70" y="260.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">0~100%</text>
+<text x="793.33" y="260.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">—</text>
+<rect x="610.00" y="263.00" width="217.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="611.20" y="268.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">FV-101</text>
+<text x="653.83" y="268.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">FV 蒸汽</text>
+<text x="711.95" y="268.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">控制阀</text>
+<text x="750.70" y="268.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">DN50 PN16</text>
+<text x="793.33" y="268.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">—</text>
+<rect x="610.00" y="271.00" width="217.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="611.20" y="276.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PV-101</text>
+<text x="653.83" y="276.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PV 放空</text>
+<text x="711.95" y="276.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">控制阀</text>
+<text x="750.70" y="276.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">DN50 PN16</text>
+<text x="793.33" y="276.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">—</text>
+<rect x="610.00" y="279.00" width="217.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="611.20" y="284.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">LV-101</text>
+<text x="653.83" y="284.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">LV 回流</text>
+<text x="711.95" y="284.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">控制阀</text>
+<text x="750.70" y="284.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">DN80 PN16</text>
+<text x="793.33" y="284.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">—</text>
+<rect x="610.00" y="287.00" width="217.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="611.20" y="292.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">HV-101</text>
+<text x="653.83" y="292.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">gate</text>
+<text x="711.95" y="292.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">管道阀</text>
+<text x="750.70" y="292.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">—</text>
+<text x="793.33" y="292.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">—</text>
+<rect x="610.00" y="295.00" width="217.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="611.20" y="300.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">CV-101</text>
+<text x="653.83" y="300.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">check</text>
+<text x="711.95" y="300.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">管道阀</text>
+<text x="750.70" y="300.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">—</text>
+<text x="793.33" y="300.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">—</text>
+<rect x="610.00" y="215.00" width="217.00" height="88.00" rx="0.00" fill="none" stroke="#37506b" stroke-width="0.40"/>
+<line x1="652.62" y1="215.00" x2="652.62" y2="303.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="710.75" y1="215.00" x2="710.75" y2="303.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="749.50" y1="215.00" x2="749.50" y2="303.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="792.12" y1="215.00" x2="792.12" y2="303.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="610.00" y1="223.00" x2="827.00" y2="223.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="610.00" y1="231.00" x2="827.00" y2="231.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="610.00" y1="239.00" x2="827.00" y2="239.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="610.00" y1="247.00" x2="827.00" y2="247.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="610.00" y1="255.00" x2="827.00" y2="255.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="610.00" y1="263.00" x2="827.00" y2="263.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="610.00" y1="271.00" x2="827.00" y2="271.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="610.00" y1="279.00" x2="827.00" y2="279.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="610.00" y1="287.00" x2="827.00" y2="287.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="610.00" y1="295.00" x2="827.00" y2="295.00" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="35.00" y="57.50" font-size="3.40" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">管线表</text>
+<rect x="35.00" y="60.00" width="565.00" height="8.00" rx="0.00" fill="#dce8f4" stroke="#37506b" stroke-width="0.40"/>
+<text x="36.20" y="65.80" font-size="2.70" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">管线号</text>
+<text x="156.61" y="65.80" font-size="2.70" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">起点</text>
+<text x="239.97" y="65.80" font-size="2.70" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">终点</text>
+<text x="323.33" y="65.80" font-size="2.70" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">规格</text>
+<text x="388.17" y="65.80" font-size="2.70" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">等级</text>
+<text x="453.00" y="65.80" font-size="2.70" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">介质</text>
+<text x="545.63" y="65.80" font-size="2.70" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">保温</text>
+<rect x="35.00" y="68.00" width="565.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="36.20" y="73.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-101-100-A1A</text>
+<text x="156.61" y="73.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">TK-101</text>
+<text x="239.97" y="73.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">P-101</text>
+<text x="323.33" y="73.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">DN100</text>
+<text x="388.17" y="73.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">A1A</text>
+<text x="453.00" y="73.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">乙苯</text>
+<text x="545.63" y="73.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">—</text>
+<rect x="35.00" y="76.00" width="565.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="36.20" y="81.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-102-100-A1A</text>
+<text x="156.61" y="81.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">P-101</text>
+<text x="239.97" y="81.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">E-101</text>
+<text x="323.33" y="81.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">DN100</text>
+<text x="388.17" y="81.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">A1A</text>
+<text x="453.00" y="81.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">乙苯</text>
+<text x="545.63" y="81.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">—</text>
+<rect x="35.00" y="84.00" width="565.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="36.20" y="89.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-103-80-A1A</text>
+<text x="156.61" y="89.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">E-101</text>
+<text x="239.97" y="89.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">R-101</text>
+<text x="323.33" y="89.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">DN80</text>
+<text x="388.17" y="89.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">A1A</text>
+<text x="453.00" y="89.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">乙苯+蒸汽</text>
+<text x="545.63" y="89.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">—</text>
+<rect x="35.00" y="92.00" width="565.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="36.20" y="97.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-104-80-A1A</text>
+<text x="156.61" y="97.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">R-101</text>
+<text x="239.97" y="97.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">E-102</text>
+<text x="323.33" y="97.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">DN80</text>
+<text x="388.17" y="97.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">A1A</text>
+<text x="453.00" y="97.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">反应产物</text>
+<text x="545.63" y="97.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">—</text>
+<rect x="35.00" y="100.00" width="565.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="36.20" y="105.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-105-100-A1A</text>
+<text x="156.61" y="105.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">E-102</text>
+<text x="239.97" y="105.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">V-101</text>
+<text x="323.33" y="105.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">DN100</text>
+<text x="388.17" y="105.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">A1A</text>
+<text x="453.00" y="105.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">冷凝液</text>
+<text x="545.63" y="105.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">—</text>
+<rect x="35.00" y="108.00" width="565.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="36.20" y="113.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-106-80-A1A</text>
+<text x="156.61" y="113.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">V-101</text>
+<text x="239.97" y="113.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">T-101</text>
+<text x="323.33" y="113.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">DN80</text>
+<text x="388.17" y="113.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">A1A</text>
+<text x="453.00" y="113.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">有机相</text>
+<text x="545.63" y="113.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">—</text>
+<rect x="35.00" y="116.00" width="565.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="36.20" y="121.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-107-50-A1A</text>
+<text x="156.61" y="121.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">T-101</text>
+<text x="239.97" y="121.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">TK-102</text>
+<text x="323.33" y="121.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">DN50</text>
+<text x="388.17" y="121.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">A1A</text>
+<text x="453.00" y="121.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">苯乙烯</text>
+<text x="545.63" y="121.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">—</text>
+<rect x="35.00" y="124.00" width="565.00" height="8.00" rx="0.00" fill="none" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="36.20" y="129.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">PL-108-50-A1A</text>
+<text x="156.61" y="129.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">V-101</text>
+<text x="239.97" y="129.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">TK-103</text>
+<text x="323.33" y="129.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">DN50</text>
+<text x="388.17" y="129.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">A1A</text>
+<text x="453.00" y="129.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">氢气</text>
+<text x="545.63" y="129.80" font-size="2.50" fill="#1f3b57" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">—</text>
+<rect x="35.00" y="60.00" width="565.00" height="72.00" rx="0.00" fill="none" stroke="#37506b" stroke-width="0.40"/>
+<line x1="155.41" y1="60.00" x2="155.41" y2="132.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="238.77" y1="60.00" x2="238.77" y2="132.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="322.13" y1="60.00" x2="322.13" y2="132.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="386.97" y1="60.00" x2="386.97" y2="132.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="451.80" y1="60.00" x2="451.80" y2="132.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="544.43" y1="60.00" x2="544.43" y2="132.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="35.00" y1="68.00" x2="600.00" y2="68.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="35.00" y1="76.00" x2="600.00" y2="76.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="35.00" y1="84.00" x2="600.00" y2="84.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="35.00" y1="92.00" x2="600.00" y2="92.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="35.00" y1="100.00" x2="600.00" y2="100.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="35.00" y1="108.00" x2="600.00" y2="108.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="35.00" y1="116.00" x2="600.00" y2="116.00" stroke="#b0bec5" stroke-width="0.30"/>
+<line x1="35.00" y1="124.00" x2="600.00" y2="124.00" stroke="#b0bec5" stroke-width="0.30"/>
+<text x="35.00" y="153.50" font-size="2.00" fill="#5a6b7d" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">（共 15 条工艺管线，本表显示前 8 条）</text>
+<text x="610.00" y="98.00" font-size="3.00" fill="#1f3b57" text-anchor="start" font-weight="bold" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">说明</text>
+<text x="610.00" y="106.00" font-size="1.90" fill="#5a6b7d" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">1. 本图参照 HG/T 20519 内容深度与 ISA-5.1 符号体系绘制；标准原文未取得，条款级合规待核对。</text>
+<text x="610.00" y="113.50" font-size="1.90" fill="#5a6b7d" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">2. P&amp;ID 不按比例；管线号/管道等级/位号来自模型，缺失处以“—”表示，需设计与校核确认。</text>
+<text x="610.00" y="121.00" font-size="1.90" fill="#5a6b7d" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">3. 工艺管线为示意路由，交叉线未做断线；手动阀/仪表位置需按实际布置调整。</text>
+<text x="610.00" y="128.50" font-size="1.90" fill="#5a6b7d" text-anchor="start" font-weight="normal" font-family="Arial, Noto Sans CJK SC, SimHei, sans-serif">4. 本图不能直接作为施工图，须经设计、校核、审核签署；未注尺寸单位 mm。</text>
+</svg>

@@ -1,0 +1,15 @@
+{
+  "name": "@local/dsh-chemellm-enforce",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Config override bundle: set the ChemELLM plugin phaseGate to enforce for gate verification.",
+  "meta": {
+    "title": "化工工程 · 强制门禁覆盖",
+    "description": "覆盖 chemellm 行配置为 phaseGate=enforce（验证用）。"
+  },
+  "files": ["cordis.patch.yml"],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" }
+  }
+}

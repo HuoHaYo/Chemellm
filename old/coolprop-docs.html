@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Welcome to CoolProp &#8212; CoolProp 8.0.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=a95f357e85573c9b56d5" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=a95f357e85573c9b56d5" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/sponsor-banner.css?v=601bc810" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=a95f357e85573c9b56d5"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=a95f357e85573c9b56d5" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=a95f357e85573c9b56d5" />
+
+    <script src="_static/documentation_options.js?v=f663eb4a"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/3Dmol-min.js?v=4d10db6a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="_static/sponsor-banner.js?v=1e541bf9"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CoolProp Online" href="online/index.html" />
+    <link rel="prev" title="General Information" href="general_information.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="8.0" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="contents.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/CoolPropLogo.png" class="logo__image only-light" alt="CoolProp 8.0.0 documentation - Home"/>
+    <img src="_static/CoolPropLogo.png" class="logo__image only-dark pst-js-only" alt="CoolProp 8.0.0 documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><ul class="navbar-nav">
+  <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+  <li class="nav-item"><a class="nav-link" href="citation.html">Citation</a></li>
+  <li class="nav-item"><a class="nav-link" href="http://ibell.pythonanywhere.com">CoolProp Online</a></li>
+  <li class="nav-item"><a class="nav-link" href="coolprop/examples.html">Examples</a></li>
+  <li class="nav-item"><a class="nav-link" href="develop/code.html">Code</a></li>
+  <li class="nav-item"><a class="nav-link" href="coolprop/wrappers/index.html">Interfaces</a></li>
+  <li class="nav-item"><a class="nav-link" href="https://github.com/sponsors/CoolProp" target="_blank" rel="noopener">💚 Sponsor</a></li>
+</ul></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item"><ul class="navbar-nav">
+  <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+  <li class="nav-item"><a class="nav-link" href="citation.html">Citation</a></li>
+  <li class="nav-item"><a class="nav-link" href="http://ibell.pythonanywhere.com">CoolProp Online</a></li>
+  <li class="nav-item"><a class="nav-link" href="coolprop/examples.html">Examples</a></li>
+  <li class="nav-item"><a class="nav-link" href="develop/code.html">Code</a></li>
+  <li class="nav-item"><a class="nav-link" href="coolprop/wrappers/index.html">Interfaces</a></li>
+  <li class="nav-item"><a class="nav-link" href="https://github.com/sponsors/CoolProp" target="_blank" rel="noopener">💚 Sponsor</a></li>
+</ul></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<h3><a href="contents.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="citation.html">Citation for CoolProp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apidoc/CoolProp.html">CoolProp package</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="general_information.html">General Information</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Welcome to CoolProp</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-coolprop">What is CoolProp?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#environments-supported">Environments Supported</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#high-level-interface-example">High-Level Interface Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#help">Help</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#projects-using-coolprop">Projects Using CoolProp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#main-developers">Main Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#supporters">Supporters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#license-information">License Information</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="citation.html">Citation for CoolProp</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="online/index.html">CoolProp Online</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fluid_properties/index.html">Fluid Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coolprop/index.html">CoolProp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="develop/index.html">Information for Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sponsor.html">Support CoolProp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zbibliography.html">Bibliography</a></li>
+</ul>
+</div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="contents.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="general_information.html" class="nav-link">General Information</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Welcome to CoolProp</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="welcome-to-coolprop">
+<h1>Welcome to CoolProp<a class="headerlink" href="#welcome-to-coolprop" title="Link to this heading">#</a></h1>
+<p>These pages help you to get started using CoolProp and provide detailed information for the
+returning user. Please feel free to browse the pages and use the menu on the left to navigate
+on this website.</p>
+<section id="what-is-coolprop">
+<h2>What is CoolProp?<a class="headerlink" href="#what-is-coolprop" title="Link to this heading">#</a></h2>
+<p>CoolProp is a C++ library that implements:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="fluid_properties/PurePseudoPure.html#list-of-fluids"><span class="std std-ref">Pure and pseudo-pure fluid equations of state and transport properties</span></a> for 136 components</p></li>
+<li><p><a class="reference internal" href="fluid_properties/Mixtures.html#mixtures"><span class="std std-ref">Mixture properties using high-accuracy Helmholtz energy formulations</span></a></p></li>
+<li><p><a class="reference internal" href="fluid_properties/Incompressibles.html#pure"><span class="std std-ref">Correlations of properties of incompressible fluids and brines</span></a></p></li>
+<li><p>Computationally efficient tabular interpolation with <a class="reference internal" href="coolprop/SVDSBTL.html#svdsbtl"><span class="std std-ref">SVD+SBTL</span></a> or <a class="reference internal" href="coolprop/Tabular.html#tabular-interpolation"><span class="std std-ref">bicubic/TTSE</span></a></p></li>
+<li><p><a class="reference internal" href="fluid_properties/HumidAir.html#humid-air"><span class="std std-ref">Highest accuracy psychrometric routines</span></a></p></li>
+<li><p><a class="reference internal" href="coolprop/REFPROP.html#refprop"><span class="std std-ref">User-friendly interface around the full capabilities of NIST REFPROP</span></a></p></li>
+<li><p><a class="reference internal" href="fluid_properties/IF97.html#if97"><span class="std std-ref">Fast IAPWS-IF97 (Industrial Formulation) for Water/Steam</span></a></p></li>
+<li><p><a class="reference internal" href="coolprop/Cubics.html#cubic-backend"><span class="std std-ref">Cubic equations of state (SRK, PR)</span></a></p></li>
+<li><p><a class="reference internal" href="coolprop/PCSAFT.html#pcsaft-backend"><span class="std std-ref">PC-SAFT equation of state</span></a></p></li>
+</ul>
+</section>
+<section id="environments-supported">
+<h2>Environments Supported<a class="headerlink" href="#environments-supported" title="Link to this heading">#</a></h2>
+<p>Programming Languages:</p>
+<ul class="simple">
+<li><p>Fully-featured wrappers: <a class="reference internal" href="coolprop/wrappers/Python/index.html#python"><span class="std std-ref">Python (2.x, 3.x)</span></a>, <a class="reference internal" href="coolprop/wrappers/StaticLibrary/index.html#static-library"><span class="std std-ref">C++ (as static library)</span></a>, <a class="reference internal" href="coolprop/wrappers/SharedLibrary/index.html#shared-library"><span class="std std-ref">C++ as shared library</span></a>, <a class="reference external" href="https://github.com/modelica/ExternalMedia">Modelica</a>, <a class="reference internal" href="coolprop/wrappers/Octave/index.html#octave"><span class="std std-ref">Octave</span></a>, <a class="reference internal" href="coolprop/wrappers/Csharp/index.html#csharp"><span class="std std-ref">C#</span></a>, <a class="reference internal" href="coolprop/wrappers/VB.net/index.html#vbdotnet"><span class="std std-ref">VB.net</span></a>, <a class="reference internal" href="coolprop/wrappers/Mathcad/index.html#mathcad"><span class="std std-ref">MathCAD</span></a>, <a class="reference internal" href="coolprop/wrappers/Java/index.html#java"><span class="std std-ref">Java</span></a>, <a class="reference internal" href="coolprop/wrappers/Android/index.html#android"><span class="std std-ref">Android</span></a>, <a class="reference internal" href="coolprop/wrappers/MATLAB/index.html#matlab"><span class="std std-ref">MATLAB</span></a></p></li>
+<li><p>High-level interface only: <a class="reference internal" href="coolprop/wrappers/Labview/index.html#labview"><span class="std std-ref">Labview</span></a>, <a class="reference internal" href="coolprop/wrappers/EES/index.html#ees"><span class="std std-ref">EES</span></a>, <a class="reference internal" href="coolprop/wrappers/Excel/index.html#excel"><span class="std std-ref">Microsoft Excel</span></a>, <a class="reference internal" href="coolprop/wrappers/LibreOffice/index.html#libreoffice"><span class="std std-ref">LibreOffice</span></a>, <a class="reference internal" href="coolprop/wrappers/Javascript/index.html#javascript"><span class="std std-ref">Javascript</span></a>, <a class="reference internal" href="coolprop/wrappers/PHP/index.html#php"><span class="std std-ref">PHP</span></a>, <a class="reference internal" href="coolprop/wrappers/FORTRAN/index.html#fortran"><span class="std std-ref">FORTRAN</span></a>, <a class="reference internal" href="coolprop/wrappers/Maple/index.html#maple"><span class="std std-ref">Maple</span></a>, <a class="reference internal" href="coolprop/wrappers/Mathematica/index.html#mathematica"><span class="std std-ref">Mathematica</span></a>, <a class="reference internal" href="coolprop/wrappers/Scilab/index.html#scilab"><span class="std std-ref">Scilab</span></a>, <a class="reference internal" href="coolprop/wrappers/DelphiLazarus/index.html#delphi"><span class="std std-ref">Delphi &amp; Lazarus</span></a>, <a class="reference internal" href="coolprop/wrappers/Julia/index.html#julia"><span class="std std-ref">Julia</span></a></p></li>
+</ul>
+<p>Architectures:</p>
+<ul class="simple">
+<li><p>32-bit/64-bit</p></li>
+<li><p>Windows, Linux, OSX, Raspberry PI, VxWorks Compact Rio, etc. (if you can compile C++ on it, CoolProp will run)</p></li>
+</ul>
+</section>
+<section id="high-level-interface-example">
+<h2>High-Level Interface Example<a class="headerlink" href="#high-level-interface-example" title="Link to this heading">#</a></h2>
+<p>In most languages, the code to calculate density <code class="docutils literal notranslate"><span class="pre">D</span></code> of Nitrogen at a temperature <code class="docutils literal notranslate"><span class="pre">T</span></code> of 298 K and a pressure <code class="docutils literal notranslate"><span class="pre">P</span></code> of 101325 Pa is something like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rho</span> <span class="o">=</span> <span class="n">PropsSI</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="mf">298.15</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="mi">101325</span><span class="p">,</span> <span class="s1">&#39;Nitrogen&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>See more examples of PropsSI usage at <a class="reference internal" href="coolprop/HighLevelAPI.html#high-level-api"><span class="std std-ref">High-Level interface</span></a> or <a class="reference internal" href="coolprop/examples.html#examples"><span class="std std-ref">Examples</span></a></p>
+</section>
+<section id="help">
+<span id="id1"></span><h2>Help<a class="headerlink" href="#help" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>(<strong>General Discussion</strong>) Create a new discussion at <a class="reference external" href="https://github.com/CoolProp/CoolProp/discussions">Github CoolProp Discussions</a></p></li>
+<li><p>(<strong>Bugs, feature requests</strong>) File a <a class="reference external" href="https://github.com/CoolProp/CoolProp/issues">Github issue</a></p></li>
+<li><p>(<strong>Support the project</strong>) <a class="reference internal" href="sponsor.html#sponsor"><span class="std std-ref">Sponsor CoolProp</span></a></p></li>
+</ul>
+</section>
+<section id="projects-using-coolprop">
+<h2>Projects Using CoolProp<a class="headerlink" href="#projects-using-coolprop" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/thermocycle/thermocycle-library">Thermocycle</a></p></li>
+<li><p><a class="reference external" href="https://pdsim.sourceforge.net/">PDSim</a></p></li>
+<li><p><a class="reference external" href="https://achp.sourceforge.net/">ACHP</a></p></li>
+<li><p><a class="reference external" href="https://dwsim.org">DWSim</a></p></li>
+<li><p><a class="reference external" href="https://fproperties.jfcoronel.org/">fProperties</a></p></li>
+<li><p><a class="reference external" href="https://github.com/dvd101x/CoolPropJavascriptDemo">CoolPropJavascriptDemo</a></p></li>
+<li><p><a class="reference external" href="https://psolver.jfcoronel.org/">pSolver</a></p></li>
+<li><p><a class="reference external" href="https://andr1976.github.io/HydDown/">HydDown</a></p></li>
+<li><p><a class="reference external" href="https://energy.sandia.gov/programs/sustainable-transportation/hydrogen/hydrogen-safety-codes-and-standards/hyram/">HYRAM+</a></p></li>
+<li><p><a class="reference external" href="https://github.com/sandialabs/uh2sc">Underground Hydrogen Salt Cavern (UH2SC) Simulation Tool</a></p></li>
+</ul>
+</section>
+<section id="main-developers">
+<h2>Main Developers<a class="headerlink" href="#main-developers" title="Link to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please do not email the developers directly, see <a class="reference internal" href="#help"><span class="std std-ref">Help</span></a> above for assistance (this way the correspondence is google-able)</p>
+</div>
+<p>The primary developers are:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="mailto:ian&#46;h&#46;bell&#37;&#52;&#48;gmail&#46;com">Ian Bell</a>, Bell Thermal Consultants</p></li>
+<li><p><a class="reference external" href="mailto:jowr&#37;&#52;&#48;ipu&#46;dk">Jorrit Wronski</a>, <a class="reference external" href="https://www.ipu.dk/expertise/thermodynamics-energy-technology/">IPU Refrigeration and Energy Technology</a>, Kgs. Lyngby, Denmark</p></li>
+<li><p><a class="reference external" href="mailto:squoilin&#37;&#52;&#48;ulg&#46;ac&#46;be">Sylvain Quoilin</a>, <a class="reference external" href="mailto:vincent&#46;lemort&#37;&#52;&#48;ulg&#46;ac&#46;be">Vincent Lemort</a>, Thermodynamics Laboratory, University of Liege, Liege, Belgium</p></li>
+</ul>
+<p>Please be so kind and cite our work in your publication: <a class="reference internal" href="citation.html#citation"><span class="std std-ref">Citation information</span></a>.</p>
+</section>
+<section id="supporters">
+<h2>Supporters<a class="headerlink" href="#supporters" title="Link to this heading">#</a></h2>
+<p></p>
+<a class="reference external image-reference" href="http://www.labothap.ulg.ac.be/"><img alt="labothap" src="_images/logo_labothap.png" style="height: 100px;" />
+</a>
+<a class="reference internal image-reference" href="_images/logo_ORCNext.jpg"><img alt="ORCNext" src="_images/logo_ORCNext.jpg" style="height: 100px;" />
+</a>
+<p></p>
+<a class="reference external image-reference" href="https://engineering.purdue.edu/Herrick/index.html"><img alt="Herrick" src="_images/logo_herrick.png" style="height: 100px;" />
+</a>
+<a class="reference external image-reference" href="https://www.maplesoft.com"><img alt="Maple" src="_images/logo_maplesoft.png" style="height: 100px;" />
+</a>
+<p></p>
+<a class="reference external image-reference" href="https://www.mek.dtu.dk/english/Sections/TES"><img alt="DTU Mechanical Engineering - Section for Thermal Energy" src="_images/logo_dtu_mekanik.png" style="height: 50px;" />
+</a>
+<a class="reference external image-reference" href="https://www.ipu.dk"><img alt="IPU Refrigeration and Energy Technology" src="_images/logo_ipu.png" style="height: 50px;" />
+</a>
+</section>
+<section id="license-information">
+<h2>License Information<a class="headerlink" href="#license-information" title="Link to this heading">#</a></h2>
+<p>CoolProp has flexible licensing terms and you can use it for commercial projects and academic work free of charge. Have a look at the actual <a class="reference external" href="https://github.com/CoolProp/CoolProp/blob/master/LICENSE">license</a>, if you are in doubt.</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="general_information.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">General Information</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="online/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">CoolProp Online</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-coolprop">What is CoolProp?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environments-supported">Environments Supported</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#high-level-interface-example">High-Level Interface Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#help">Help</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#projects-using-coolprop">Projects Using CoolProp</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main-developers">Main Developers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supporters">Supporters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license-information">License Information</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.rst.txt"
+           rel="nofollow">Show Source</a></li>
+    <li><a href="https://github.com/CoolProp/CoolProp/blob/master/Web/index.rst"
+           rel="nofollow">Show on GitHub</a></li>
+    <li><a href="https://github.com/CoolProp/CoolProp/edit/master/Web/index.rst"
+           rel="nofollow">Edit on GitHub</a></li>
+  </ul></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=a95f357e85573c9b56d5"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=a95f357e85573c9b56d5"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2010-2026, Ian H. Bell and the CoolProp Team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.19.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
