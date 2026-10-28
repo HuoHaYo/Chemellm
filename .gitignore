@@ -1,4 +1,4 @@
-﻿# ---- 虚拟环境 / 缓存 ----
+# ---- 虚拟环境 / 缓存 ----
 .venv/
 .venv-sim/
 __pycache__/
@@ -32,6 +32,16 @@ standards/
 # ---- 标准页图（由已入库 PDF 渲染生成，可复现）----
 standards/*-pages/
 standards/HGT20519/
+
+# ---- 汇报材料、提交用习题与赛题（个人/第三方材料，仅本机留存，不入仓库）----
+汇报_*.pptx
+汇报_*.pdf
+化工特化型大语言模型智能助手-*.pptx
+docs/汇报_*
+docs/assets/deck-*.png
+吸收习题交付/
+work_absorption/
+old/26化工设计大赛题目.pdf
 
 # ---- pip 临时目录（本机安装残留）----
 pip-*/

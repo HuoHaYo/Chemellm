@@ -96,7 +96,7 @@ python -m venv .venv
 
 在面板点「新建项目」，然后在会话里直接说：
 
-> 用 chem_project 创建项目；用 chem_intake 登记 `old/26化工设计大赛题目.pdf`；用 chem_requirements 登记赛题要求；用 chem_plan 建立成果计划；用 chem_object 写入设计依据；用 chem_calc 计算；用 chem_generate 生成报告；用 chem_review 自检；用 chem_bundle 打包。
+> 用 chem_project 创建项目；用 chem_intake 登记你的赛题（或任务书）PDF——本仓库不提供赛题原文，需自备；用 chem_requirements 登记要求；用 chem_plan 建立成果计划；用 chem_object 写入设计依据；用 chem_calc 计算；用 chem_generate 生成报告；用 chem_review 自检；用 chem_bundle 打包。
 
 换机器部署：`scripts/package-plugin.ps1` 可打出内置便携 Python 运行时的插件包（约 169 MiB），目标机无需预装 Python。运行时与分发包不进本仓库。
 

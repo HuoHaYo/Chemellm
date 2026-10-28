@@ -99,7 +99,7 @@ curl.exe -s http://127.0.0.1:8765/v1/health
 在任一会话中直接对模型说（工具名即函数名）：
 
 ```text
-先用 chem_project 创建项目“示例·苯乙烯”；用 chem_intake 登记 old/26化工设计大赛题目.pdf；
+先用 chem_project 创建项目“示例·苯乙烯”；用 chem_intake 登记你的赛题/任务书 PDF（本仓库不提供原文）；
 用 chem_requirements 登记 5 条要求（B01..B05）；用 chem_plan 建立成果计划（可研报告、物料衡算表、P&ID）；
 用 chem_object 写入设计依据 basis-main（规模、纯度、压力、温度，带单位/条件/来源）；
 用 chem_calc 算 material_balance；用 chem_generate 生成可研报告（docx+pdf）；

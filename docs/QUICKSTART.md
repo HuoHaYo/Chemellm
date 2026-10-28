@@ -30,7 +30,7 @@ powershell -ExecutionPolicy Bypass -File scripts\package-plugin.ps1
 
 任一会话中直接说：
 
-> 先用 chem_project 列出项目；然后用 chem_intake 登记 `old/26化工设计大赛题目.pdf`；用 chem_requirements 登记要求；用 chem_plan 建成果计划；用 chem_object 写设计依据；用 chem_calc 算物料衡算；用 chem_generate 生成报告；用 chem_review 自检；最后用 chem_bundle 打包。
+> 先用 chem_project 列出项目；然后用 chem_intake 登记你的赛题（或任务书）PDF（本仓库不提供赛题原文）；用 chem_requirements 登记要求；用 chem_plan 建成果计划；用 chem_object 写设计依据；用 chem_calc 算物料衡算；用 chem_generate 生成报告；用 chem_review 自检；最后用 chem_bundle 打包。
 
 P&ID 与设备图：
 

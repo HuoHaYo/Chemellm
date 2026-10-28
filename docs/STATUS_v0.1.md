@@ -2,6 +2,7 @@
 
 > **归档说明**：本文是 v0.1 时期的 README（2026-10-27），保留作为实现细节与逐项验证记录，不再作为项目入口。面向新读者的介绍见根目录 [README.md](../README.md)。
 > 文中的相对链接按仓库根目录书写；`.venv/`、`data/`、`dist/`、`dsh-chemellm/runtime/`、`standards/` 等已不在版本库中。
+> 汇报材料（开题/汇报 PPT、汇报 PDF）、提交用的习题与赛题原文同样已移出版本库，仅在本机留存；文中相关示例路径需自行替换。
 
 把化工工程的项目管理、计算、文档与验收搬进 **DeepSeek Harness**，全部在本机完成，不依赖云端。
 
@@ -96,7 +97,7 @@ powershell -ExecutionPolicy Bypass -File scripts\package-plugin.ps1
 
 在面板点「新建项目」，然后在任意会话中让模型：
 
-> 用 chem_project 创建项目；用 chem_intake 登记 old/26化工设计大赛题目.pdf；用 chem_requirements 登记赛题要求；用 chem_plan 建立成果计划；用 chem_object 写入设计依据；用 chem_calc 计算；用 chem_generate 生成报告；用 chem_review 自检；用 chem_bundle 打包。
+> 用 chem_project 创建项目；用 chem_intake 登记赛题 PDF（原文未入库，需自备）；用 chem_requirements 登记赛题要求；用 chem_plan 建立成果计划；用 chem_object 写入设计依据；用 chem_calc 计算；用 chem_generate 生成报告；用 chem_review 自检；用 chem_bundle 打包。
 
 完整链路示例（不经过模型，直接验证内核）：
 
