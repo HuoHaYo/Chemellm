@@ -3,19 +3,17 @@
  *
  * Adds a "化工工程" entry to the sidebar and a full project panel:
  * overview / requirements / plan / basis / calculations / files / review.
- * Talks to the local kernel directly (http://127.0.0.1:8765/v1), which is
- * loopback-only and sends CORS headers for the local Web UI. The Host proxy
- * at /chemellm/* remains available for tools that prefer same-origin access.
+ * Uses the Host's same-origin proxy for API requests and file previews.
+ * The Host owns the configured endpoint and kernel token.
  */
 window.__ModuleLoader__.load({
   id: '@local/dsh-chemellm',
   factory(require) {
     const React = require('react')
     const h = React.createElement
-    const { useState, useEffect } = React
+    const { useState, useEffect, useRef } = React
 
-    // 内核端点：默认 loopback。可用 window.__CHEMELLM_ENDPOINT__ 覆盖（调试用）。
-    const KERNEL = (window.__CHEMELLM_ENDPOINT__ || 'http://127.0.0.1:8765').replace(/\/$/, '')
+    const API = '/chemellm/api'
 
     const T = {
       bg: 'var(--dsw-alias-bg-base)',
@@ -52,7 +50,7 @@ window.__ModuleLoader__.load({
         request.method = init.method
         request.body = init.body
       }
-      const response = await fetch(KERNEL + '/v1' + path, request)
+      const response = await fetch(API + path, { ...request, signal: AbortSignal.timeout(120000) })
       const text = await response.text()
       let data
       try {
@@ -177,7 +175,7 @@ window.__ModuleLoader__.load({
         bundleBody = h('div', null,
           h('div', { style: { marginBottom: 6 } },
             project.bundle.name + ' · ' + Math.round((project.bundle.bytes || 0) / 1024) + ' KB'),
-          h(Link, { href: KERNEL + '/v1/bundles/' + encodeURIComponent(project.bundle.name) }, '下载成果包 ↓'))
+          h(Link, { href: '/chemellm/bundles/' + encodeURIComponent(project.bundle.name) }, '下载成果包 ↓'))
       } else {
         bundleBody = h(Empty, null, '尚未打包；校核通过后可用 chem_bundle 打包。')
       }
@@ -278,7 +276,7 @@ window.__ModuleLoader__.load({
       return h('div', null, hint, h(Table, {
         columns: ['名称', '类型', '来源', '大小', '操作'],
         rows: items.map((item) => {
-          const base = KERNEL + '/v1/artifacts/' + encodeURIComponent(item.artifactId)
+          const base = '/chemellm/files/' + encodeURIComponent(item.artifactId)
           return [
             item.name || '—',
             item.kind || '—',
@@ -307,7 +305,7 @@ window.__ModuleLoader__.load({
         : h(Empty, null, '暂无 blockers。')
       const actions = h('div', { style: { display: 'flex', gap: 8, marginTop: 4 } },
         h(Button, { onClick: props.onReview, disabled: props.busy }, '运行自检'),
-        h(Button, { onClick: props.onBundle, disabled: props.busy }, '打包成果'))
+        h(Button, { onClick: props.onBundle, disabled: props.busy || !review.ready }, '打包成果'))
       return h('div', null, status, blockersBody, actions)
     }
 
@@ -327,137 +325,101 @@ window.__ModuleLoader__.load({
       const [creating, setCreating] = useState(false)
       const [draftName, setDraftName] = useState('')
 
-      useEffect(() => {
-        let alive = true
-        api('/projects').then((data) => {
-          if (!alive) return
-          const list = data.projects || []
-          setProjects(list)
-          if (list.length) {
-            setActiveId(list[0].projectId)
-            return api('/projects/' + encodeURIComponent(list[0].projectId)).then((detailData) => {
-              if (alive) setProject(detailData.project)
-            })
-          }
-          return null
-        }).catch((caught) => {
-          if (alive) setError(message(caught))
+      const alive = useRef(true)
+      const generation = useRef(0)
+
+      // Every action commits only if it is still the latest request. This also
+      // prevents an older project's calculation response replacing a new one.
+      async function perform(load, commit) {
+        const ticket = ++generation.current
+        setBusy(true)
+        setError('')
+        try {
+          const data = await load()
+          if (alive.current && ticket === generation.current) commit(data)
+        } catch (caught) {
+          if (alive.current && ticket === generation.current) setError(message(caught))
+        } finally {
+          if (alive.current && ticket === generation.current) setBusy(false)
+        }
+      }
+
+      function projectPath(id = activeId) {
+        return '/projects/' + encodeURIComponent(id)
+      }
+
+      function refresh() {
+        return perform(async () => {
+          const { projects: list = [] } = await api('/projects')
+          const next = list.some((item) => item.projectId === activeId)
+            ? activeId : (list[0] && list[0].projectId) || ''
+          const data = next ? await api(projectPath(next)) : { project: null }
+          return { list, next, project: data.project }
+        }, (data) => {
+          setProjects(data.list)
+          setActiveId(data.next)
+          setProject(data.project)
+          setDetail(null)
         })
-        return () => { alive = false }
+      }
+
+      useEffect(() => {
+        alive.current = true
+        refresh()
+        return () => { alive.current = false; generation.current += 1 }
       }, [])
 
-      async function refresh() {
-        setBusy(true)
-        setError('')
-        try {
-          const data = await api('/projects')
-          const list = data.projects || []
-          setProjects(list)
-          const next = activeId || (list[0] && list[0].projectId) || ''
-          setActiveId(next)
-          if (next) {
-            const detailData = await api('/projects/' + encodeURIComponent(next))
-            setProject(detailData.project)
-          } else {
-            setProject(null)
-          }
-        } catch (caught) {
-          setError(message(caught))
-        } finally {
-          setBusy(false)
-        }
-      }
-
-      async function openProject(projectId) {
-        setActiveId(projectId)
+      function openProject(id) {
+        setActiveId(id)
+        setProject(null)
         setDetail(null)
-        setBusy(true)
-        setError('')
-        try {
-          const data = await api('/projects/' + encodeURIComponent(projectId))
-          setProject(data.project)
-        } catch (caught) {
-          setError(message(caught))
-        } finally {
-          setBusy(false)
-        }
+        return perform(() => api(projectPath(id)), (data) => setProject(data.project))
       }
 
-      async function createProject(name) {
+      function createProject(name) {
+        if (busy) return
         const trimmed = String(name || '').trim()
-        if (!trimmed) {
-          setError('请输入项目名称')
-          return
-        }
-        setBusy(true)
-        setError('')
-        try {
+        if (!trimmed) { setError('请输入项目名称'); return }
+        return perform(async () => {
           const created = await api('/projects', { method: 'POST', body: JSON.stringify({ name: trimmed }) })
           const id = created.project.projectId
-          setActiveId(id)
-          setProject({
-            id, name: trimmed, phase: 'intake', requirements: [], plan: {},
-            objects: {}, calculations: [], files: [], review: {}, bundle: null,
-          })
-          const data = await api('/projects')
-          setProjects(data.projects || [])
+          const [data, listing] = await Promise.all([api(projectPath(id)), api('/projects')])
+          return { id, project: data.project, projects: listing.projects || [] }
+        }, (data) => {
+          setActiveId(data.id)
+          setProject(data.project)
+          setProjects(data.projects)
+          setDetail(null)
+          setTab('overview')
           setCreating(false)
           setDraftName('')
-        } catch (caught) {
-          setError(message(caught))
-        } finally {
-          setBusy(false)
-        }
+        })
       }
 
-      async function runReview() {
-        if (!activeId) return
-        setBusy(true)
-        setError('')
-        try {
-          await api('/projects/' + encodeURIComponent(activeId) + '/review', {
-            method: 'POST', body: JSON.stringify({ note: '面板自检' }),
-          })
-          const data = await api('/projects/' + encodeURIComponent(activeId))
+      function mutateProject(action, payload, nextTab) {
+        if (!activeId || busy) return
+        return perform(async () => {
+          await api(projectPath() + '/' + action, { method: 'POST', body: JSON.stringify(payload) })
+          const [data, listing] = await Promise.all([api(projectPath()), api('/projects')])
+          return { project: data.project, projects: listing.projects || [] }
+        }, (data) => {
           setProject(data.project)
-          setTab('review')
-        } catch (caught) {
-          setError(message(caught))
-        } finally {
-          setBusy(false)
-        }
+          setProjects(data.projects)
+          setDetail(null)
+          setTab(nextTab)
+        })
       }
 
-      async function runBundle() {
-        if (!activeId) return
-        setBusy(true)
-        setError('')
-        try {
-          await api('/projects/' + encodeURIComponent(activeId) + '/bundle', { method: 'POST', body: '{}' })
-          const data = await api('/projects/' + encodeURIComponent(activeId))
-          setProject(data.project)
-          setTab('overview')
-        } catch (caught) {
-          setError(message(caught))
-        } finally {
-          setBusy(false)
-        }
-      }
-
-      async function openCalculation(item) {
+      function openCalculation(item) {
         if (!activeId || !item.calculationId) return
-        try {
-          const data = await api('/projects/' + encodeURIComponent(activeId) + '/calculations/' + encodeURIComponent(item.calculationId))
-          setDetail(data)
-        } catch (caught) {
-          setError(message(caught))
-        }
+        setDetail(null)
+        return perform(() => api(projectPath() + '/calculations/' + encodeURIComponent(item.calculationId)), setDetail)
       }
 
       const phase = phaseOf(project)
       const select = projects.length
         ? h('select', {
-          value: activeId,
+          value: activeId, disabled: busy,
           onChange: (event) => openProject(event.target.value),
           style: {
             padding: '5px 8px', borderRadius: 8, border: '1px solid ' + T.border,
@@ -540,7 +502,10 @@ window.__ModuleLoader__.load({
       else if (tab === 'basis') body = h(Basis, { project })
       else if (tab === 'calculations') body = h(Calculations, { project, detail, onOpen: openCalculation })
       else if (tab === 'files') body = h(Files, { project })
-      else body = h(Review, { project, busy, onReview: runReview, onBundle: runBundle })
+      else body = h(Review, { project, busy,
+        onReview: () => mutateProject('review', { note: '面板自检' }, 'review'),
+        onBundle: () => mutateProject('bundle', {}, 'overview'),
+      })
       const content = h('div', { style: { flex: 1, overflow: 'auto', padding: '16px 20px', minHeight: 0 } }, body)
       return h('div', {
         style: {
@@ -555,8 +520,7 @@ window.__ModuleLoader__.load({
       const [error, setError] = useState('')
       useEffect(() => {
         let alive = true
-        fetch(KERNEL + '/v1/health')
-          .then((response) => response.json())
+        api('/health')
           .then((data) => { if (alive) setHealth(data) })
           .catch(() => { if (alive) setError('本地内核未运行') })
         return () => { alive = false }

@@ -54,7 +54,7 @@ dsh-chemellm\runtime\python\python.exe -c "import fastapi, scipy, thermo, report
 | 停止内核 | 开发模式：内核窗口 Ctrl+C；部署包：退出 DSH 时插件会停止子进程 |
 | 修改内核地址 | `dsh-chemellm/cordis.patch.yml` → `config.endpoint`（端口同时用于自动启动） |
 | 关闭自动启动 | `config.autostart: false`，改为手动启动内核 |
-| 开启强制门禁 | `config.phaseGate: enforce`，内核侧 `CHEMELLM_PHASE_GATE=enforce` |
+| 开启强制门禁 | `config.phaseGate: enforce`；自动启动会同步到内核，自行启动需设置 `CHEMELLM_PHASE_GATE=enforce` |
 | 加访问令牌 | 内核侧 `CHEMELLM_KERNEL_TOKEN=...`，插件 `config.token` 同步 |
 | 指定数据目录 | `config.dataDir`（默认 `<DSH_PROFILE_DIR>/chemellm-data`） |
 

@@ -140,3 +140,13 @@
   - 运行时 `runtime/kernel` 已同步 `pid_standard.py`/`pid_data.py`/`server.py`；插件 zip 待统一重打包。
 
 - 2026-10-27（DWSIM 接入）：新增 `kernel/dwsim_bridge.py` 与 `kernel/dwsim/DwsimRunner.exe`（C# .NET Framework，调用 DWSIM.Automation.Automation3）；`dwsim` 工具支持 status/run，加载 .dwxmz/.dwxml、求解并输出 `DWSIM结果.json` 与 `DWSIM物流表.csv`。用 DWSIM 9.0.5 自带 `Cavett's Problem.dwxmz` 实测：solved=true、20 条物料流、15 个单元操作；Host 内核与 8771 测试内核均通过，项目 `DWSIM 接入验证（Host / Cavett）` review ready=true 并打包。DWSIM 为外部 GPL-3.0 软件，不随插件分发；结果未做专业审核。
+
+- 2026-10-29（DSH 插件重构与清理）：
+  - Host 拆分为入口、工具、内核生命周期与代理；保留 12 个工具。面板、设置、文件与成果包统一通过 Host 同源代理访问，令牌由 Host 注入。
+  - 自动启动传递令牌、门禁、数据路径与快照路径；开发优先当前源码和 `.venv`，分发使用便携 Python；并发请求只启动一个子进程，停用关闭自建内核。阶段检查读取最新项目，修复面板修改后阶段缓存过期。
+  - 删除 legacy 透传包、enforce 配置覆盖包、5 组 DWSIM Probe 源码和二进制、源码目录的过期 SHA256 清单，共 16 个文件。保留正式 DWSIM Runner、`old/app` 和本地工程数据。
+  - 打包只取 Python、第三方库、依赖清单与当前源码，排除旧 runtime 中的项目数据、快照、习题材料和缓存；显式包含目录安装需要的 `package.json`。
+  - `node --test dsh-chemellm/test/*.test.js`：6 项通过。`scripts/test_kernel.py`：2 项通过，验证令牌、阶段拒绝、计算、报告、下载、打包哈希和依据变更使校核失效。
+  - Playwright + Edge 隔离面板验证通过：新建、切换、校核、打包、同源下载链接、旧响应隔离；1280×850 与 860×760 截图已检查，0 页面异常。测试使用当前 Client 和 Host 代理，DSH 未运行，未改动 DSH profile，实际 DSH 加载仍需安装/重启后确认。
+  - `node scripts/test_packaged_plugin.mjs`：使用包内 Python 启动真实内核，令牌、enforce、工具闭环及代理下载通过；独立测试数据已清理。Windows 系统临时目录对子进程的访问受限，分发测试改用工作区独立临时目录。
+  - 最终 `dist/dsh-chemellm-20261029-win-x64.zip`：161.5 MiB，9386 项 SHA256 全部匹配，无 runtime/data、runtime/.chem、runtime/work_absorption。Python 依赖有上游弃用/资源警告，未影响回归通过。

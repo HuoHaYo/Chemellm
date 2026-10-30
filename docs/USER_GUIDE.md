@@ -47,11 +47,13 @@
 | 键 | 默认 | 说明 |
 |---|---|---|
 | `endpoint` | `http://127.0.0.1:8765` | 内核地址；端口也用于自动启动 |
-| `token` | `''` | 可选访问令牌（内核侧 `CHEMELLM_KERNEL_TOKEN` 同步） |
+| `token` | `''` | Host 访问令牌；自动启动时同步到内核，自行启动需设置 `CHEMELLM_KERNEL_TOKEN` |
 | `phaseGate` | `advisory` | `enforce` 时越阶段调用会被拦截 |
 | `autostart` | `true` | 探测不到内核时自动拉起 |
 | `python` | `''` | 覆盖 Python 路径（默认包内运行时） |
 | `dataDir` | `''` | 覆盖数据目录 |
+
+面板、文件预览和下载统一经 DSH Host 的同源代理访问内核，浏览器不保存令牌。自动启动时也会同步 `phaseGate`，并把工程快照写入 `dataDir/.chem`。旧版的 legacy 透传包与 enforce 覆盖包已移除；升级时卸载这两个伴生插件，保留主插件并重启 DSH。
 
 ### 2.3 验证
 

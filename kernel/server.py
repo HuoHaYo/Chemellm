@@ -151,6 +151,8 @@ EVIDENCE_TOOLS = {
 MIN_PHASE = {
     **{name: "basis" for name in CALC_TOOLS},
     **{name: "basis" for name in GENERATE_TOOLS},
+    "export_xlsx": "basis",
+    "export_freecad": "basis",
     "pid": "basis",
     "pid_data": "basis",
     "equipment_datasheet": "basis",

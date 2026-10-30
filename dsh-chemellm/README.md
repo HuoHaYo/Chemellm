@@ -7,13 +7,17 @@
 ```
 dsh-chemellm/
   index.js / client.js / icon.svg / cordis.patch.yml / package.json
+  lib/
+    kernel.js         配置、令牌、HTTP 请求、内核启动与关闭
+    tools.js          12 个域工具与阶段校验
+    proxy.js          API、预览、下载的同源流式代理
   runtime/
     python/           便携 CPython 3.12（Windows x64，embeddable）
     site-packages/    内核所需第三方依赖（fastapi/uvicorn/scipy/thermo/CoolProp/
                       cantera/reportlab/ezdxf/openpyxl/python-docx/pptx/pypdf/
                       pdfplumber/pypdfium2/pillow/pint/httpx/...）
-    kernel/           本地内核（server.py、pid_sheet.py、cad_engineering.py、drawing_tools.py）
-    app/              归档的 ChemELLM 应用模块（计算模型、证据、文档工具）
+    kernel/           打包时从仓库 kernel/ 复制的当前源码
+    app/              打包时从 old/app/ 复制的计算、证据与文档库
     requirements.txt  依赖清单（供审计/重建）
 ```
 
@@ -26,18 +30,34 @@ dsh-chemellm/
    - 先探测 `endpoint`（默认 `http://127.0.0.1:8765/v1/health`）；
    - 若不可达且 `autostart: true`，用包内 `runtime/python/python.exe` 启动 `runtime/kernel/server.py`；
    - 数据目录默认 `<DSH_PROFILE_DIR>/chemellm-data`（可用 `dataDir` 覆盖）。
-5. 左侧「化工工程」出现即表示 Client 已加载；面板会直连内核（CORS 已启用）。
+5. 左侧「化工工程」出现即表示 Client 已加载；面板经 DSH Host 的 `/chemellm/api/*` 访问内核，预览与下载也经 Host 转发，浏览器无需持有内核令牌。
 
 ### 配置项（cordis.patch.yml）
 
 | 键 | 默认 | 说明 |
 |---|---|---|
 | `endpoint` | `http://127.0.0.1:8765` | 内核地址；端口同时用于启动内置内核 |
-| `token` | `''` | 可选内核令牌 |
+| `token` | `''` | Host 请求使用的内核令牌；自动启动时同步到内核 |
 | `phaseGate` | `advisory` | `enforce` 时越阶段调用被拦截 |
 | `autostart` | `true` | 内核未运行时是否自动拉起 |
-| `python` | `''` | 覆盖 Python 路径（默认用包内 runtime） |
+| `python` | `''` | 覆盖 Python 路径；开发模式优先仓库 `.venv`，分发模式使用包内运行时 |
 | `dataDir` | `''` | 覆盖数据目录（默认 profile 下 `chemellm-data`） |
+
+自动启动仅用于 `http://127.0.0.1:<端口>` 或 `http://localhost:<端口>`；其他 HTTP(S) 地址只连接现有服务。自行启动的内核需手动配置相同令牌和 `CHEMELLM_PHASE_GATE`。自动启动会同步令牌、阶段门禁、数据路径，并将快照写入 `dataDir/.chem`。停用插件会关闭它自行启动的内核。
+
+## 开发与打包
+
+```powershell
+node --test dsh-chemellm/test/*.test.js
+python -X utf8 scripts/test_kernel.py
+.\scripts\package-plugin.ps1 -ValidateOnly
+.\scripts\package-plugin.ps1
+node scripts/test_packaged_plugin.mjs
+```
+
+打包脚本按 `package.json.files` 收集插件文件，从便携 runtime 中只取 `python/`、`site-packages/` 和 `requirements.txt`，内核源码来自当前仓库。项目数据、快照、习题材料及缓存不进入分发包；SHA256 清单只在 `dist/dsh-chemellm/` 中生成。`-SkipArchive` 可只生成分发目录，`-RuntimeDirectory <路径>` 可指定便携依赖来源。
+
+升级旧版本时，在 DSH 中移除 `@local/dsh-chemellm-legacy` 和 `@local/dsh-chemellm-enforce`，主插件已提供 `chem_tool`，强制门禁直接设置 `phaseGate: enforce`，随后重启 DSH Host。
 
 ## 能力矩阵（目标机无预装 Python 时）
 

@@ -9,7 +9,10 @@
     ".": "./index.js",
     "./client": "./client.js"
   },
-  "files": ["index.js", "client.js", "cordis.patch.yml", "icon.svg", "README.md", "runtime"],
+  "files": ["index.js", "client.js", "lib", "cordis.patch.yml", "icon.svg", "README.md", "runtime"],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
   "meta": {
     "title": "化工工程",
     "description": "本地化工工程工作台：项目、要求、依据、计算、成果与验收，全部在 DSH 内完成。"

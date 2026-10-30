@@ -98,24 +98,29 @@ python -m venv .venv
 
 > 用 chem_project 创建项目；用 chem_intake 登记你的赛题（或任务书）PDF——本仓库不提供赛题原文，需自备；用 chem_requirements 登记要求；用 chem_plan 建立成果计划；用 chem_object 写入设计依据；用 chem_calc 计算；用 chem_generate 生成报告；用 chem_review 自检；用 chem_bundle 打包。
 
-换机器部署：`scripts/package-plugin.ps1` 可打出内置便携 Python 运行时的插件包（约 169 MiB），目标机无需预装 Python。运行时与分发包不进本仓库。
+换机器部署：`scripts/package-plugin.ps1` 可打出内置便携 Python 运行时的插件包（约 159 MiB），目标机无需预装 Python。运行时与分发包不进本仓库；已构建的直装包见 [docs/RELEASE_v0.1.0.md](docs/RELEASE_v0.1.0.md)。
 
 ## 仓库结构
 
 ```
 kernel/               本地计算内核（FastAPI /v1 契约、22 类模型、图纸与数据链）
-dsh-chemellm/         DSH 插件（Host 侧 12 个 chem_* 工具、Client 侧面板与设置）
+dsh-chemellm/         DSH 插件（12 个 chem_* 工具、面板与设置）
+  lib/                工具定义、内核生命周期、同源代理
+  test/               Host 集成与进程生命周期回归测试
   runtime/            便携运行时（不进仓库，由打包脚本生成）
-dsh-chemellm-legacy/  伴生透传包（历史）
-dsh-chemellm-enforce/ 门禁覆盖包（把 phaseGate 切到 enforce，用于测试）
 scripts/              启动、冒烟、打包、成果包校验、图形与文档生成
 docs/                 教程、工具清单、图纸规则、验收记录与专题说明
-old/                  原 ChemELLM 项目归档（Web 界面、云端部署、原测试），仅存档
+old/app/              内核仍在使用的计算、文档与证据库（不能删除）
+old/ 其余部分         原 Web 界面、部署资料与回归测试归档
 data/                 本机数据（内核库、项目 JSON、成果文件、打包 zip；不进仓库）
 .chem/                只读工程快照（供面板与 diff 使用；不进仓库）
 ```
 
 数据位置：`data/kernel/chemellm.sqlite3`（计算与文件元数据）、`data/projects/<id>/project.json`（项目状态，唯一事实源）、`data/kernel/artifacts/`（成果原件）、`data/bundles/`（打包 zip）、`.chem/<id>/`（只读快照）。
+
+插件自动启动时，数据与 `.chem` 快照统一放在配置的 `dataDir` 下；面板、预览和下载统一通过 DSH Host 的 `/chemellm/*` 代理，令牌由 Host 添加。升级时请移除历史 `dsh-chemellm-legacy` 与 `dsh-chemellm-enforce` 插件，使用主插件的 `chem_tool` 与 `phaseGate` 配置。
+
+开发验证：`node --test dsh-chemellm/test/*.test.js`；安装 Python 依赖后运行 `python -X utf8 scripts/test_kernel.py`。后者使用独立临时数据目录，验证令牌、阶段门禁、计算、报告、打包哈希和审核失效。当前模块职责与升级说明见 [docs/DSH_PLUGINIZATION.md](docs/DSH_PLUGINIZATION.md)。
 
 ## 已验证的结果
 
@@ -150,6 +155,7 @@ data/                 本机数据（内核库、项目 JSON、成果文件、�
 | [docs/STANDARDS.md](docs/STANDARDS.md) · [docs/MANDATORY_GB.md](docs/MANDATORY_GB.md) | 标准登记与强制国标台账 |
 | [docs/DWSIM.md](docs/DWSIM.md) | DWSIM 桥接用法 |
 | [docs/ACCEPTANCE.md](docs/ACCEPTANCE.md) | 逐轮验收记录（含失败与缺项，不删改历史） |
+| [docs/RELEASE_v0.1.0.md](docs/RELEASE_v0.1.0.md) | v0.1.0 直装包（Windows x64）发布说明、安装步骤与校验值 |
 | [docs/STATUS_v0.1.md](docs/STATUS_v0.1.md) | README 旧版（实现细节与逐项验证状态） |
 
 ## 说明

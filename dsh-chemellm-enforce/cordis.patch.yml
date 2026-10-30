@@ -1,6 +1,0 @@
-- id: chemellm
-  name: '@local/dsh-chemellm'
-  config:
-    endpoint: http://127.0.0.1:8765
-    token: ''
-    phaseGate: enforce
